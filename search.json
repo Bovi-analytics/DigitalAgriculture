@@ -1,45 +1,10 @@
 [
   {
-    "objectID": "ae/ae-0-movies.html",
-    "href": "ae/ae-0-movies.html",
-    "title": "Movie budgets and revenues",
-    "section": "",
-    "text": "Important\n\n\n\nThis application exercise is a demo only. You do not have a corresponding repository for it and you’re not expected to turn in anything for it.\nWe will look at the relationship between budget and revenue for movies made in the United States in 1986 to 2020. The dataset is created based on data from the Internet Movie Database (IMDB).\nlibrary(tidyverse) # for data analysis and visualisation\nlibrary(scales)    # for pretty axis labels\nlibrary(DT)        # for interactive table"
-  },
-  {
-    "objectID": "ae/ae-0-movies.html#data",
-    "href": "ae/ae-0-movies.html#data",
-    "title": "Movie budgets and revenues",
-    "section": "Data",
-    "text": "Data\nThe movies data set includes basic information about each movie including budget, genre, movie studio, director, etc. A full list of the variables may be found here.\n\nmovies &lt;- read_csv(\"https://raw.githubusercontent.com/danielgrijalva/movie-stats/master/movies.csv\")\n\nView the first 10 rows of data.\n\nmovies\n\n# A tibble: 7,668 × 15\n   name   rating genre  year released score  votes director writer star  country\n   &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;    &lt;dbl&gt;  &lt;dbl&gt; &lt;chr&gt;    &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;  \n 1 The S… R      Drama  1980 June 13…   8.4 9.27e5 Stanley… Steph… Jack… United…\n 2 The B… R      Adve…  1980 July 2,…   5.8 6.5 e4 Randal … Henry… Broo… United…\n 3 Star … PG     Acti…  1980 June 20…   8.7 1.20e6 Irvin K… Leigh… Mark… United…\n 4 Airpl… PG     Come…  1980 July 2,…   7.7 2.21e5 Jim Abr… Jim A… Robe… United…\n 5 Caddy… R      Come…  1980 July 25…   7.3 1.08e5 Harold … Brian… Chev… United…\n 6 Frida… R      Horr…  1980 May 9, …   6.4 1.23e5 Sean S.… Victo… Bets… United…\n 7 The B… R      Acti…  1980 June 20…   7.9 1.88e5 John La… Dan A… John… United…\n 8 Ragin… R      Biog…  1980 Decembe…   8.2 3.30e5 Martin … Jake … Robe… United…\n 9 Super… PG     Acti…  1980 June 19…   6.8 1.01e5 Richard… Jerry… Gene… United…\n10 The L… R      Biog…  1980 May 16,…   7   1   e4 Walter … Bill … Davi… United…\n# ℹ 7,658 more rows\n# ℹ 4 more variables: budget &lt;dbl&gt;, gross &lt;dbl&gt;, company &lt;chr&gt;, runtime &lt;dbl&gt;\n\n\nThe ___ dataset has ___ observations and ___ variables."
-  },
-  {
-    "objectID": "ae/ae-0-movies.html#analysis",
-    "href": "ae/ae-0-movies.html#analysis",
-    "title": "Movie budgets and revenues",
-    "section": "Analysis",
-    "text": "Analysis\n\nGross over time\nWe begin by looking at how the average gross revenue (gross) has changed over time. Since we want to visualize the results, we will choose a few genres of interest for the analysis.\n\ngenre_list &lt;- c(\"Comedy\", \"Action\", \"Animation\", \"Horror\")\n\nThen, we will filter for these genres and visualize the average gross revenue over time.\n\nmovies %&gt;%\n  filter(genre %in% genre_list) %&gt;% \n  group_by(genre,year) %&gt;%\n  summarise(avg_gross = mean(gross)) %&gt;%\n  ggplot(mapping = aes(x = year, y = avg_gross, color= genre)) +\n    geom_point() + \n    geom_line() +\n    scale_color_viridis_d() +\n    scale_y_continuous(labels = label_dollar()) +\n    labs(\n      x = \"Year\",\n      y = \"Average Gross Revenue (US Dollars)\",\n      color = \"Genre\",\n      title = \"Gross Revenue Over Time\"\n    )\n\n`summarise()` has grouped output by 'genre'. You can override using the\n`.groups` argument.\n\n\nWarning: Removed 47 rows containing missing values (`geom_point()`).\n\n\nWarning: Removed 23 rows containing missing values (`geom_line()`).\n\n\n\n\n\nThe plot suggests …\n\n\nBudget and gross\nNext, let’s see the relationship between a movie’s budget and its gross revenue.\n\nmovies %&gt;%\n  filter(genre %in% genre_list, budget &gt; 0) %&gt;% \n  ggplot(mapping = aes(x=log(budget), y = log(gross), color=genre)) +\n  geom_point(alpha = 0.6) +\n  geom_smooth(method = \"lm\", se = FALSE) +\n  facet_wrap(~ genre) + \n  scale_color_viridis_d() +\n  labs(\n    x = \"Log-transformed Budget\",\n    y = \"Log-transformed Gross Revenue\"\n  )\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\nWarning: Removed 35 rows containing non-finite values (`stat_smooth()`).\n\n\nWarning: Removed 35 rows containing missing values (`geom_point()`)."
-  },
-  {
-    "objectID": "ae/ae-0-movies.html#exercises",
-    "href": "ae/ae-0-movies.html#exercises",
-    "title": "Movie budgets and revenues",
-    "section": "Exercises",
-    "text": "Exercises\n\nSuppose we fit a regression model for each genre that uses budget to predict gross revenue. What are the signs of the correlation between budget and gross and the slope in each regression equation?\nSuppose we fit the regression model from the previous question. Which genre would you expect to have the smallest residuals, on average (residual = observed revenue - predicted revenue)?\nIn the remaining time, discuss the following: Notice in the graph above that budget and gross are log-transformed. Why are the log-transformed values of the variables displayed rather than the original values (in U.S. dollars)?"
-  },
-  {
-    "objectID": "ae/ae-0-movies.html#appendix",
-    "href": "ae/ae-0-movies.html#appendix",
-    "title": "Movie budgets and revenues",
-    "section": "Appendix",
-    "text": "Appendix\nBelow is a list of genres in the data set:"
-  },
-  {
     "objectID": "computing-access.html",
     "href": "computing-access.html",
     "title": "Computing access",
     "section": "",
-    "text": "To access computing resources for the introductory data science courses offered by Utrecht University we will make use of the Google Colab computing services linked to the course drive storage.\nIf this is your first time accessing Google Colab, make sure you have a registered gmail address. You should have access to this ‘Shared drive’ in your Google Drive. If not, send an email to the course teacher to get access.\nMake sure you get familiar with Google Colab by reading and trying to run your first pieces of code in the ‘Welcome To Colaboratory’ notebook."
+    "text": "You can choose 2 ways of working with R.\n\nOffline\nYou can choose to install R (‘the engine’) and R-studio (‘the dashboard’) on your own computer. This works well when you want to learn to use R in a simple way. The downside if the local approach is that when working in a team the use of additional tools is needed (eg. GitHub).\nFollow the Dodona tutorial on the use of R and R studio (here).\n\n\nOnline\nTo access computing resources for the introductory data science courses offered by Utrecht University we will make use of the Google Colab computing services linked to the course drive storage.\nIf this is your first time accessing Google Colab, make sure you have a registered gmail address. You should have access to this ‘Shared drive’ in your Google Drive. If not, send an email to the course teacher to get access.\nMake sure you get familiar with Google Colab by reading and trying to run your first pieces of code in the ‘Welcome To Colaboratory’ notebook."
   },
   {
     "objectID": "computing-troubleshooting.html",
@@ -65,42 +30,42 @@
   {
     "objectID": "course-overview.html",
     "href": "course-overview.html",
-    "title": "Digital Agriculture",
+    "title": "Digital Agriculture - Dier&Data",
     "section": "",
     "text": "Digital Agriculture is an innovative and interdisciplinary field that leverages technology and data-driven approaches to revolutionize agriculture practices. This course provides an in-depth exploration of the principles, tools, and applications of digital agriculture, equipping students with the knowledge and skills to address the challenges and opportunities in modern agriculture."
   },
   {
     "objectID": "course-overview.html#course-description",
     "href": "course-overview.html#course-description",
-    "title": "Digital Agriculture",
+    "title": "Digital Agriculture - Dier&Data",
     "section": "",
     "text": "Digital Agriculture is an innovative and interdisciplinary field that leverages technology and data-driven approaches to revolutionize agriculture practices. This course provides an in-depth exploration of the principles, tools, and applications of digital agriculture, equipping students with the knowledge and skills to address the challenges and opportunities in modern agriculture."
   },
   {
     "objectID": "course-overview.html#course-objectives",
     "href": "course-overview.html#course-objectives",
-    "title": "Digital Agriculture",
+    "title": "Digital Agriculture - Dier&Data",
     "section": "Course Objectives",
     "text": "Course Objectives\n\nUnderstand the fundamentals of digital agriculture and its current challenges.\nExplore the various technologies, precision farming techniques and digital tools used in agriculture.\nPerform data collection, visualisation, analysis, and interpretation in digital agriculture.\nDevelop practical skills through hands-on programming activities.\nExplore the applications of artificial intelligence and machine learning in agriculture.\nUnderstand the importance of data privacy and security in digital agriculture.\nEvaluate the economic, environmental, and social impacts of digital agriculture."
   },
   {
     "objectID": "course-overview.html#course-outline",
     "href": "course-overview.html#course-outline",
-    "title": "Digital Agriculture",
+    "title": "Digital Agriculture - Dier&Data",
     "section": "Course Outline",
     "text": "Course Outline\n\nWeek 1: Introduction to Digital Agriculture\n- Historical perspective and digital transformation of agriculture and its challenges\n- Challenges of data privacy in agriculture (incl. legal considerations)\n- Economic benefits and challenges\n- Social and ethical considerations\n\n\nWeek 2: Data in Agriculture\n- Data collection methods (sensors, satellites, etc.)\n- Data analysis and visualization tools\n- Data-driven decision-making in farming\n\n\nWeek 4: Artificial Intelligence and Machine Learning\n- Introduction to AI and ML in agriculture\n\n\nWeek 3: Technologies in Agriculture\n- Principles of precision agriculture\n- Farm management systems\n- Farm machinery and automation"
   },
   {
     "objectID": "course-overview.html#course-format",
     "href": "course-overview.html#course-format",
-    "title": "Digital Agriculture",
+    "title": "Digital Agriculture - Dier&Data",
     "section": "Course Format",
     "text": "Course Format\nThis course will consist of a combination of lectures, hands-on practical sessions, case studies, group discussions, and guest lectures from industry experts. Students will also have the opportunity to work on a real-world project related to digital agriculture."
   },
   {
     "objectID": "course-overview.html#assessment",
     "href": "course-overview.html#assessment",
-    "title": "Digital Agriculture",
+    "title": "Digital Agriculture - Dier&Data",
     "section": "Assessment",
     "text": "Assessment\nAssessment methods may include individual assignments, a group project, presentations, and a final examination.\nBy the end of this course, students will have gained a comprehensive understanding of how digital technologies are transforming agriculture and will be well-equipped to contribute to the advancement of sustainable and efficient farming practices in the digital age."
   },
@@ -277,21 +242,21 @@
     "href": "course-team.html",
     "title": "Teaching team",
     "section": "",
-    "text": "Dr. Miel Hostens (he/his) is assistant professor at department of Population Health Sciences (0.9 FTE – Utrecht University) and at department of Laboratory for Animal Nutrition and Animal Product Quality (0.1 FTE – Ghent University) focusing on the creation of methodologies using precision dairy farming to monitor sustainable food production systems from a global perspective.\n\n\n\nOffice hours\nLocation\n\n\n\n\nAnytime\nSlack & Teams\n\n\nTuesday - Friday 9:00 am - 18:00 pm\nUtrech University, Department of Population Health Sciences\nYalelaan 7, 3584 CL Utrecht, room MGB-0.031\n\n\nMondays 9:00 am - 18:00 pm\nGhent University, Department of Animal Sciences and Aquatic Ecology\nCampus Coupure, Coupure Links 653, B-9000 Gent, block F\n\n\n\n\nIf these times don’t work for you or you’d like to schedule a one-on-one meeting, you can do so at this link."
+    "text": "Dr. Miel Hostens (he/his) is assistant professor at department of Population Health Sciences (0.9 FTE – Utrecht University) and at department of Laboratory for Animal Nutrition and Animal Product Quality (0.1 FTE – Ghent University) focusing on the creation of methodologies using precision dairy farming to monitor sustainable food production systems from a global perspective.\n\n\n\nOffice hours\nLocation\n\n\n\n\nAnytime\nSlack & Teams\n\n\nTuesday - Friday 9:00 am - 18:00 pm\nUtrech University, Department of Population Health Sciences\nYalelaan 7, 3584 CL Utrecht, room MGB-0.029\n\n\nMondays 9:00 am - 18:00 pm\nGhent University, Department of Animal Sciences and Aquatic Ecology\nCampus Coupure, Coupure Links 653, B-9000 Gent, block F\n\n\n\n\nIf these times don’t work for you or you’d like to schedule a one-on-one meeting, you can do so at this link."
   },
   {
     "objectID": "course-team.html#instructor",
     "href": "course-team.html#instructor",
     "title": "Teaching team",
     "section": "",
-    "text": "Dr. Miel Hostens (he/his) is assistant professor at department of Population Health Sciences (0.9 FTE – Utrecht University) and at department of Laboratory for Animal Nutrition and Animal Product Quality (0.1 FTE – Ghent University) focusing on the creation of methodologies using precision dairy farming to monitor sustainable food production systems from a global perspective.\n\n\n\nOffice hours\nLocation\n\n\n\n\nAnytime\nSlack & Teams\n\n\nTuesday - Friday 9:00 am - 18:00 pm\nUtrech University, Department of Population Health Sciences\nYalelaan 7, 3584 CL Utrecht, room MGB-0.031\n\n\nMondays 9:00 am - 18:00 pm\nGhent University, Department of Animal Sciences and Aquatic Ecology\nCampus Coupure, Coupure Links 653, B-9000 Gent, block F\n\n\n\n\nIf these times don’t work for you or you’d like to schedule a one-on-one meeting, you can do so at this link."
+    "text": "Dr. Miel Hostens (he/his) is assistant professor at department of Population Health Sciences (0.9 FTE – Utrecht University) and at department of Laboratory for Animal Nutrition and Animal Product Quality (0.1 FTE – Ghent University) focusing on the creation of methodologies using precision dairy farming to monitor sustainable food production systems from a global perspective.\n\n\n\nOffice hours\nLocation\n\n\n\n\nAnytime\nSlack & Teams\n\n\nTuesday - Friday 9:00 am - 18:00 pm\nUtrech University, Department of Population Health Sciences\nYalelaan 7, 3584 CL Utrecht, room MGB-0.029\n\n\nMondays 9:00 am - 18:00 pm\nGhent University, Department of Animal Sciences and Aquatic Ecology\nCampus Coupure, Coupure Links 653, B-9000 Gent, block F\n\n\n\n\nIf these times don’t work for you or you’d like to schedule a one-on-one meeting, you can do so at this link."
   },
   {
     "objectID": "course-team.html#teachers",
     "href": "course-team.html#teachers",
     "title": "Teaching team",
     "section": "Teachers",
-    "text": "Teachers\n\n\n\n\n\n\n\n\n\n\nName\nOffice hours\nLocation\n\n\n\n\n\nName 1\nThursday 7 - 9 pm"
+    "text": "Teachers\n\n\n\n\n\n\n\n\n\n\nName\nOffice hours\nLocation\n\n\n\n\n\nYara Sleghers\n\nMGB\n\n\n\nBelen Rabaglino\n\nMGB\n\n\n\nHans Vernooij\n\nMGB"
   },
   {
     "objectID": "exams/exam-1.html",
@@ -396,7 +361,7 @@
     "href": "index.html",
     "title": "Digital Agriculture",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the course. Note that this schedule will be updated as the course progresses, with all changes documented here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nPrepare\nSlides\nCode’n Practice\nAssignment\nProject\n\n\n\n\n1\nMon, 9:00-9:45\nWelcome to Digital Ag (HC)\n\n🖥️\n\n\n\n\n\n\nMon, 10:00-10:45\nIntroduction to Python (and R) programming (WC)\n📖\n🖥️\n\n\n\n\n\n\nMon, 11:00-12h45\nDigital transformation in agriculture (IHC)\n\n🖥️\n\n\n\n\n\n\nMon, 13:15-15:00\nIntroduction to team project (WC)\n\n\n\n\n📂\n\n\n\nMon, 15:15-17:00\nReproducible & FAIR data science (IGC)\n\n🖥️\n\n\n\n\n\n\nTue, 13:00-17:00\nPython/R Programming (WC)\n📖\n🖥️\n💻\n\n\n\n\n\nWed, 13:15-15:00\nChallenges of data privacy in agriculture (IHC)\n\n🖥️\n\n\n\n\n\n\nWed, 15:15-17:00\nEconomic benefits of digital agriculture (IHC)\n\n🖥️\n\n\n\n\n\n\nThu, 13:00-17:00\nPython/R Programming (WC)\n📖\n🖥️\n💻\n\n\n\n\n\nFr, 17:00\nProgramming assignment deadline\n\n\n\n📋\n\n\n\n2\nMon, 9:00-9:45\n(I)HC\n📖\n🖥️\n\n\n\n\n\n\nMon, 10:00-10:45\n(I)HC\n📖\n🖥️\n💻\n\n\n\n\n\nMon, 11:00-12h45\n(I)HC\n📖\n🖥️\n\n\n\n\n\n\nMon, 13:15-15:00\n(I)HC\n\n\n\n\n📂\n\n\n\nTue, 13:00-17:00\nPython/R Programming (WC)\n📖\n🖥️\n💻\n\n\n\n\n\nWed, 13:15-15:00\n(I)HC\n📖\n🖥️\n\n\n\n\n\n\nWed, 15:15-17:00\n(I)HC\n📖\n🖥️\n\n\n\n\n\n\nThu, 13:00-17:00\nPython/R Programming (WC)\n📖\n🖥️\n💻\n\n\n\n\n\nFr, 9:00-9:45\n(I)HC\n📖\n🖥️\n💻\n\n\n\n\n\nFr, 10:00-10:45\n(I)HC\n📖\n🖥️\n💻\n\n\n\n\n\nFr, 11:00-12h45\n(I)HC\n📖\n🖥️\n💻\n\n\n\n\n\nFr, 17:00\nProgramming assignment deadline\n\n\n\n📋\n\n\n\n3\nMon, 9:00-9:45\n(I)HC\n📖\n🖥️\n\n\n\n\n\n\nMon, 10:00-10:45\n(I)HC\n📖\n🖥️\n💻\n\n\n\n\n\nMon, 11:00-12h45\n(I)HC\n📖\n🖥️\n\n\n\n\n\n\nMon, 13:15-15:00\n(I)HC\n\n\n\n\n📂\n\n\n\nTue, 13:00-17:00\nPython/R Programming (WC)\n📖\n🖥️\n💻\n\n\n\n\n\nWed, 13:15-15:00\n(I)HC\n📖\n🖥️\n\n\n\n\n\n\nWed, 15:15-17:00\n(I)HC\n📖\n🖥️\n\n\n\n\n\n\nThu, 13:00-17:00\nPython/R Programming (WC)\n📖\n🖥️\n💻\n\n\n\n\n\nFr, 9:00-9:45\n(I)HC\n📖\n🖥️\n💻\n\n\n\n\n\nFr, 10:00-10:45\n(I)HC\n📖\n🖥️\n💻\n\n\n\n\n\nFr, 11:00-12h45\n(I)HC\n📖\n🖥️\n💻\n\n\n\n\n\nFr, 17:00\nProgramming assignment deadline\n\n\n\n📋\n\n\n\n4\nMon, 10:00-10:45\n(I)HC\n📖\n🖥️\n💻\n\n\n\n\n\nMon, 11:00-12h45\n(I)HC\n📖\n🖥️\n\n\n\n\n\n\nMon, 13:15-15:00\n(I)HC\n\n\n\n\n📂\n\n\n\nTue, 13:00-17:00\nPython/R Programming (WC)\n📖\n🖥️\n💻\n\n\n\n\n\nWed, 13:15-15:00\n(I)HC\n📖\n🖥️\n\n\n\n\n\n\nWed, 15:15-17:00\n(I)HC\n📖\n🖥️\n\n\n\n\n\n\nThu, 13:00-17:00\nPython/R Programming (WC)\n📖\n🖥️\n💻\n\n\n\n\n\nFr, 9:00-9:45\n(I)HC\n📖\n🖥️\n💻\n\n\n\n\n\nFr, 10:00-10:45\n(I)HC\n📖\n🖥️\n💻\n\n\n\n\n\nFr, 11:00-12h45\n(I)HC\n📖\n🖥️\n💻\n\n\n\n\n\nFr, 17:00\nProgramming assignment deadline\n\n\n\n📋\n\n\n\n5\nMon, 11:00-12h45\n(I)HC\n📖\n🖥️\n\n\n\n\n\n\nMon, 13:15-15:00\n(I)HC\n\n\n\n\n📂\n\n\n\nTue, 13:00-17:00\nPython/R Programming (WC)\n📖\n🖥️\n💻\n\n\n\n\n\nWed, 13:15-15:00\n(I)HC\n📖\n🖥️\n\n\n\n\n\n\nWed, 15:15-17:00\n(I)HC\n📖\n🖥️\n\n\n\n\n\n\nThu, 13:00-17:00\nPython/R Programming (WC)\n📖\n🖥️\n💻\n\n\n\n\n\nFr, 10:00-12:45\nFinal project presentation\n\n🖥️\n💻\n\n📂\n\n\n\nFr, 13:15-15:00\nCourse evaluation\n\n\n\n\n\n\n\n\nFr, 17:00\nProgramming assignment deadline\n\n\n\n📋"
+    "text": "This page contains an outline of the topics, content, and assignments for the course. Note that this schedule will be updated as the course progresses, with all changes documented here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nTeachers\nPrepare\nSlides\nCode’n Practice\nAssignment\nProject\n\n\n\n\n1\nMon, 9:00-9:45\nWelcome to Digital Ag (HC)\nMiel Hostens\n\n🖥️\n\n\n\n\n\n\nMon, 10:00-10:45\nIntroduction to statistical programming (WC)\nBelen Rabaglino\n📖\n🖥️\n\n\n\n\n\n\nMon, 11:00-12h45\nDigital transformations in livestock and agriculture (IHC)\nMiel Hostens\n\n🖥️\n\n\n\n\n\n\nMon, 13:15-15:00\nIntroduction to team project (WC)\nMiel Hostens\n\n\n\n\n📂\n\n\n\nMon, 15:15-17:00\nA guideline to reproducible & FAIR data science (IGC)\n\n📖\n🖥️\n\n\n\n\n\n\nTue, 13:00-17:00\nStatistical programming (WC)\nYara Sleghers & Belen Rabaglino\n📖\n🖥️\n💻\n\n\n\n\n\nWed, 13:15-15:00\nChallenges of data privacy (IHC)\nHans vernooij\n\n🖥️\n\n\n\n\n\n\nWed, 15:15-17:00\nEconomic benefits of digital agriculture (IHC)\nWilma Steeneveld\n\n🖥️\n\n\n\n\n\n\nFr, 17:00\nProgramming assignment deadline\n\n\n\n\n📋\n\n\n\n2\nMon, 9:00-9:45\n(I)HC\n\n📖\n🖥️\n\n\n\n\n\n\nMon, 10:00-10:45\n(I)HC\n\n📖\n🖥️\n💻\n\n\n\n\n\nMon, 11:00-12h45\n(I)HC\n\n📖\n🖥️\n\n\n\n\n\n\nMon, 13:15-15:00\n(I)HC\n\n\n\n\n\n📂\n\n\n\nTue, 13:00-17:00\nR Programming (WC)\nYara Sleghers & Belen Rabaglino\n📖\n🖥️\n💻\n\n\n\n\n\nWed, 13:15-15:00\n(I)HC\n\n📖\n🖥️\n\n\n\n\n\n\nWed, 15:15-17:00\n(I)HC\n\n📖\n🖥️\n\n\n\n\n\n\nFr, 9:00-9:45\n(I)HC\n\n📖\n🖥️\n💻\n\n\n\n\n\nFr, 10:00-10:45\n(I)HC\n\n📖\n🖥️\n💻\n\n\n\n\n\nFr, 11:00-12h45\n(I)HC\n\n📖\n🖥️\n💻\n\n\n\n\n\nFr, 17:00\nProgramming assignment deadline\n\n\n\n\n📋\n\n\n\n3\nMon, 9:00-9:45\n(I)HC\n\n📖\n🖥️\n\n\n\n\n\n\nMon, 10:00-10:45\n(I)HC\n\n📖\n🖥️\n💻\n\n\n\n\n\nMon, 11:00-12h45\n(I)HC\n\n📖\n🖥️\n\n\n\n\n\n\nMon, 13:15-15:00\n(I)HC\n\n\n\n\n\n📂\n\n\n\nTue, 13:00-17:00\nR Programming (WC)\nYara Sleghers & Belen Rabaglino\n📖\n🖥️\n💻\n\n\n\n\n\nWed, 13:15-15:00\n(I)HC\n\n📖\n🖥️\n\n\n\n\n\n\nWed, 15:15-17:00\n(I)HC\n\n📖\n🖥️\n\n\n\n\n\n\nFr, 9:00-9:45\n(I)HC\n\n📖\n🖥️\n💻\n\n\n\n\n\nFr, 10:00-10:45\n(I)HC\n\n📖\n🖥️\n💻\n\n\n\n\n\nFr, 11:00-12h45\n(I)HC\n\n📖\n🖥️\n💻\n\n\n\n\n\nFr, 17:00\nProgramming assignment deadline\n\n\n\n\n📋\n\n\n\n4\nMon, 10:00-10:45\n(I)HC\n\n📖\n🖥️\n💻\n\n\n\n\n\nMon, 11:00-12h45\n(I)HC\n\n📖\n🖥️\n\n\n\n\n\n\nMon, 13:15-15:00\n(I)HC\n\n\n\n\n\n📂\n\n\n\nTue, 13:00-17:00\nR Programming (WC)\nYara Sleghers & Belen Rabaglino\n📖\n🖥️\n💻\n\n\n\n\n\nWed, 13:15-15:00\n(I)HC\n\n📖\n🖥️\n\n\n\n\n\n\nWed, 15:15-17:00\n(I)HC\n\n📖\n🖥️\n\n\n\n\n\n\nFr, 9:00-9:45\n(I)HC\n\n📖\n🖥️\n💻\n\n\n\n\n\nFr, 10:00-10:45\n(I)HC\n\n📖\n🖥️\n💻\n\n\n\n\n\nFr, 11:00-12h45\n(I)HC\n\n📖\n🖥️\n💻\n\n\n\n\n\nFr, 17:00\nProgramming assignment deadline\n\n\n\n\n📋\n\n\n\n5\nMon, 11:00-12h45\n(I)HC\n\n📖\n🖥️\n\n\n\n\n\n\nMon, 13:15-15:00\n(I)HC\n\n\n\n\n\n📂\n\n\n\nTue, 13:00-17:00\nR Programming (WC)\nYara Sleghers & Belen Rabaglino\n📖\n🖥️\n💻\n\n\n\n\n\nWed, 13:15-15:00\n(I)HC\n\n📖\n🖥️\n\n\n\n\n\n\nWed, 15:15-17:00\n(I)HC\n\n📖\n🖥️\n\n\n\n\n\n\nFr, 10:00-12:45\nFinal project presentation\n\n\n🖥️\n💻\n\n📂\n\n\n\nFr, 13:15-15:00\nCourse evaluation\n\n\n\n\n\n\n\n\n\nFr, 17:00\nProgramming assignment deadline\n\n\n\n\n📋"
   },
   {
     "objectID": "labs/lab-0.html",
@@ -1134,213 +1099,45 @@
     "text": "Recap\n\n\nUsed simple linear regression to describe the relationship between a quantitative predictor and quantitative outcome variable.\nUsed the least squares method to estimate the slope and intercept.å\nWe interpreted the slope and intercept.\n\n\nSlope: For every one unit increase in \\(x\\), we expect y to be higher/lower by \\(\\hat{\\beta}_1\\) units, on average.\nIntercept: If \\(x\\) is 0, then we expect \\(y\\) to be \\(\\hat{\\beta}_0\\) units.\n\n\nPredicted the response given a value of the predictor variable.\nDefined extrapolation and why we should avoid it.\n\n\n\n\n\nsta210-s22.github.io/website"
   },
   {
-    "objectID": "supplemental/log-transformations.html",
-    "href": "supplemental/log-transformations.html",
-    "title": "Log Transformations in Linear Regression",
+    "objectID": "supplemental/extra-1.html",
+    "href": "supplemental/extra-1.html",
+    "title": "Extras",
     "section": "",
-    "text": "Note\n\n\n\nThe following supplemental notes were created by Dr. Maria Tackett for STA 210. They are provided for students who want to dive deeper into the mathematics behind regression and reflect some of the material covered in STA 211: Mathematics of Regression. Additional supplemental notes will be added throughout the semester.\nThis document provides details about the model interpretation when the predictor and/or response variables are log-transformed. For simplicity, we will discuss transformations for the simple linear regression model as shown in Equation 1.\n\\[\n\\label{orig}\ny = \\beta_0 + \\beta_1 x\n\\tag{1}\\]\nAll results and interpretations can be easily extended to transformations in multiple regression models.\nNote: log refers to the natural logarithm."
-  },
-  {
-    "objectID": "supplemental/log-transformations.html#log-transformation-on-the-response-variable",
-    "href": "supplemental/log-transformations.html#log-transformation-on-the-response-variable",
-    "title": "Log Transformations in Linear Regression",
-    "section": "Log-transformation on the response variable",
-    "text": "Log-transformation on the response variable\nSuppose we fit a linear regression model with \\(\\log(y)\\), the log-transformed \\(y\\), as the response variable. Under this model, we assume a linear relationship exists between \\(x\\) and \\(\\log(y)\\), such that \\(\\log(y) \\sim N(\\beta_0 + \\beta_1 x, \\sigma^2)\\) for some \\(\\beta_0\\), \\(\\beta_1\\) and \\(\\sigma^2\\). In other words, we can model the relationship between \\(x\\) and \\(\\log(y)\\) using the model in Equation 2.\n\\[\n\\log(y) = \\beta_0 + \\beta_1 x\n\\tag{2}\\]\nIf we interpret the model in terms of \\(\\log(y)\\), then we can use the usual interpretations for slope and intercept. When reporting results, however, it is best to give all interpretations in terms of the original response variable \\(y\\), since interpretations using log-transformed variables are often more difficult to truly understand.\nIn order to get back on the original scale, we need to use the exponential function (also known as the anti-log), \\(\\exp\\{x\\} = e^x\\). Therefore, we use the model in Equation 2 for interpretations and predictions, we will use Equation 3 to state our conclusions in terms of \\(y\\).\n\\[\n\\begin{aligned}\n&\\exp\\{\\log(y)\\} = \\exp\\{\\beta_0 + \\beta_1 x\\} \\\\[10pt]\n\\Rightarrow &y = \\exp\\{\\beta_0 + \\beta_1 x\\} \\\\[10pt]\n\\Rightarrow &y = \\exp\\{\\beta_0\\}\\exp\\{\\beta_1 x\\}\n\\end{aligned}\n\\tag{3}\\]\nIn order to interpret the slope and intercept, we need to first understand the relationship between the mean, median and log transformations.\n\nMean, Median, and Log Transformations\nSuppose we have a dataset y that contains the following observations:\n\n\n[1] 3 5 6 7 8\n\n\nIf we log-transform the values of y then calculate the mean and median, we have\n\n\n\n\n\nmean_log_y\nmedian_log_y\n\n\n\n\n1.70503\n1.79176\n\n\n\n\n\nIf we calculate the mean and median of y, then log-transform the mean and median, we have\n\n\n\n\n\nlog_mean\nlog_median\n\n\n\n\n1.75786\n1.79176\n\n\n\n\n\nThis is a simple illustration to show\n\n\\(\\text{Mean}[{\\log(y)}] \\neq \\log[\\text{Mean}(y)]\\) - the mean and log are not commutable\n\\(\\text{Median}[\\log(y)] = \\log[\\text{Median}(y)]\\) - the median and log are commutable\n\n\n\nInterpretaton of model coefficients\nUsing Equation 2, the mean \\(\\log(y)\\) for any given value of \\(x\\) is \\(\\beta_0 + \\beta_1 x\\); however, this does not indicate that the mean of \\(y = \\exp\\{\\beta_0 + \\beta_1 x\\}\\) (see previous section). From the assumptions of linear regression, we assume that for any given value of \\(x\\), the distribution of \\(\\log(y)\\) is Normal, and therefore symmetric. Thus the median of \\(\\log(y)\\) is equal to the mean of \\(\\log(y)\\), i.e \\(\\text{Median}(\\log(y)) = \\beta_0 + \\beta_1 x\\).\nSince the log and the median are commutable, \\(\\text{Median}(\\log(y)) = \\beta_0 + \\beta_1 x \\Rightarrow \\text{Median}(y) = \\exp\\{\\beta_0 + \\beta_1 x\\}\\). Thus, when we log-transform the response variable, the interpretation of the intercept and slope are in terms of the effect on the median of \\(y\\).\nIntercept: The intercept is expected median of \\(y\\) when the predictor variable equals 0. Therefore, when \\(x=0\\),\n\\[\n\\begin{aligned}\n&\\log(y) = \\beta_0 + \\beta_1 \\times 0 = \\beta_0 \\\\[10pt]\n\\Rightarrow &y = \\exp\\{\\beta_0\\}\n\\end{aligned}\n\\]\nInterpretation: When \\(x=0\\), the median of \\(y\\) is expected to be \\(\\exp\\{\\beta_0\\}\\).\nSlope: The slope is the expected change in the median of \\(y\\) when \\(x\\) increases by 1 unit. The change in the median of \\(y\\) is\n\\[\n\\exp\\{[\\beta_0 + \\beta_1 (x+1)] - [\\beta_0 + \\beta_1 x]\\} = \\frac{\\exp\\{\\beta_0 + \\beta_1 (x+1)\\}}{\\exp\\{\\beta_0 + \\beta_1 x\\}} = \\frac{\\exp\\{\\beta_0\\}\\exp\\{\\beta_1 x\\}\\exp\\{\\beta_1\\}}{\\exp\\{\\beta_0\\}\\exp\\{\\beta_1 x\\}} = \\exp\\{\\beta_1\\}\n\\]\nThus, the median of \\(y\\) for \\(x+1\\) is \\(\\exp\\{\\beta_1\\}\\) times the median of \\(y\\) for \\(x\\).\nInterpretation: When \\(x\\) increases by one unit, the median of \\(y\\) is expected to multiply by a factor of \\(\\exp\\{\\beta_1\\}\\)."
-  },
-  {
-    "objectID": "supplemental/log-transformations.html#log-transformation-on-the-predictor-variable",
-    "href": "supplemental/log-transformations.html#log-transformation-on-the-predictor-variable",
-    "title": "Log Transformations in Linear Regression",
-    "section": "Log-transformation on the predictor variable",
-    "text": "Log-transformation on the predictor variable\nSuppose we fit a linear regression model with \\(\\log(x)\\), the log-transformed \\(x\\), as the predictor variable. Under this model, we assume a linear relationship exists between \\(\\log(x)\\) and \\(y\\), such that \\(y \\sim N(\\beta_0 + \\beta_1 \\log(x), \\sigma^2)\\) for some \\(\\beta_0\\), \\(\\beta_1\\) and \\(\\sigma^2\\). In other words, we can model the relationship between \\(\\log(x)\\) and \\(y\\) using the model in #eq-log-x.\n\\[\ny = \\beta_0 + \\beta_1 \\log(x)\n\\tag{4}\\]\nIntercept: The intercept is the mean of \\(y\\) when \\(\\log(x) = 0\\), i.e. \\(x = 1\\).\nInterpretation: When \\(x = 1\\) \\((\\log(x) = 0)\\), the mean of \\(y\\) is expected to be \\(\\beta_0\\).\nSlope: The slope is interpreted in terms of the change in the mean of \\(y\\) when \\(x\\) is multiplied by a factor of \\(C\\), since \\(\\log(Cx) = \\log(x) + \\log(C)\\). Thus, when \\(x\\) is multiplied by a factor of \\(C\\), the change in the mean of \\(y\\) is\n\\[\n\\begin{aligned}\n[\\beta_0 + \\beta_1 \\log(Cx)] - [\\beta_0 + \\beta_1 \\log(x)] &= \\beta_1 [\\log(Cx) - \\log(x)] \\\\[10pt]\n& = \\beta_1[\\log(C) + \\log(x) - \\log(x)] \\\\[10pt]\n& = \\beta_1 \\log(C)\n\\end{aligned}\n\\]\nThus the mean of \\(y\\) changes by \\(\\beta_1 \\log(C)\\) units.\nInterpretation: When \\(x\\) is multiplied by a factor of \\(C\\), the mean of \\(y\\) is expected to change by \\(\\beta_1 \\log(C)\\) units. For example, if \\(x\\) is doubled, then the mean of \\(y\\) is expected to change by \\(\\beta_1 \\log(2)\\) units."
-  },
-  {
-    "objectID": "supplemental/log-transformations.html#log-transformation-on-the-the-response-and-predictor-variable",
-    "href": "supplemental/log-transformations.html#log-transformation-on-the-the-response-and-predictor-variable",
-    "title": "Log Transformations in Linear Regression",
-    "section": "Log-transformation on the the response and predictor variable",
-    "text": "Log-transformation on the the response and predictor variable\nSuppose we fit a linear regression model with \\(\\log(x)\\), the log-transformed \\(x\\), as the predictor variable and \\(\\log(y)\\), the log-transformed \\(y\\), as the response variable. Under this model, we assume a linear relationship exists between \\(\\log(x)\\) and \\(\\log(y)\\), such that \\(\\log(y) \\sim N(\\beta_0 + \\beta_1 \\log(x), \\sigma^2)\\) for some \\(\\beta_0\\), \\(\\beta_1\\) and \\(\\sigma^2\\). In other words, we can model the relationship between \\(\\log(x)\\) and \\(\\log(y)\\) using the model in Equation 5.\n\\[\n\\log(y) = \\beta_0 + \\beta_1 \\log(x)\n\\tag{5}\\]\nBecause the response variable is log-transformed, the interpretations on the original scale will be in terms of the median of \\(y\\) (see the section on the log-transformed response variable for more detail).\nIntercept: The intercept is the mean of \\(y\\) when \\(\\log(x) = 0\\), i.e. \\(x = 1\\). Therefore, when \\(\\log(x) = 0\\),\n\\[\n\\begin{aligned}\n&\\log(y) = \\beta_0 + \\beta_1 \\times 0 = \\beta_0 \\\\[10pt]\n\\Rightarrow &y = \\exp\\{\\beta_0\\}\n\\end{aligned}\n\\]\nInterpretation: When \\(x = 1\\) \\((\\log(x) = 0)\\), the median of \\(y\\) is expected to be \\(\\exp\\{\\beta_0\\}\\).\nSlope: The slope is interpreted in terms of the change in the median \\(y\\) when \\(x\\) is multiplied by a factor of \\(C\\), since \\(\\log(Cx) = \\log(x) + \\log(C)\\). Thus, when \\(x\\) is multiplied by a factor of \\(C\\), the change in the median of \\(y\\) is\n\\[\n\\begin{aligned}\n\\exp\\{[\\beta_0 + \\beta_1 \\log(Cx)] - [\\beta_0 + \\beta_1 \\log(x)]\\} &=\n\\exp\\{\\beta_1 [\\log(Cx) - \\log(x)]\\} \\\\[10pt]\n& = \\exp\\{\\beta_1[\\log(C) + \\log(x) - \\log(x)]\\} \\\\[10pt]\n& = \\exp\\{\\beta_1 \\log(C)\\} = C^{\\beta_1}\n\\end{aligned}\n\\]\nThus, the median of \\(y\\) for \\(Cx\\) is \\(C^{\\beta_1}\\) times the median of \\(y\\) for \\(x\\).\nInterpretation: When \\(x\\) is multiplied by a factor of \\(C\\), the median of \\(y\\) is expected to multiple by a factor of \\(C^{\\beta_1}\\). For example, if \\(x\\) is doubled, then the median of \\(y\\) is expected to multiply by \\(2^{\\beta_1}\\)."
+    "text": "Note\n\n\n\nComing soon"
   },
   {
     "objectID": "weeks/week-1.html",
     "href": "weeks/week-1.html",
     "title": "Week 1",
     "section": "",
-    "text": "Important\n\n\n\nClasses are virtual this week. Find Zoom links here."
-  },
-  {
-    "objectID": "weeks/week-1.html#prepare",
-    "href": "weeks/week-1.html#prepare",
-    "title": "Week 1",
-    "section": "Prepare",
-    "text": "Prepare\n📖 Read the syllabus\n📖 Read the support resources"
-  },
-  {
-    "objectID": "weeks/week-1.html#participate",
-    "href": "weeks/week-1.html#participate",
-    "title": "Week 1",
-    "section": "Participate",
-    "text": "Participate\n🖥️ Lab 0 -Meet+ greet\n🖥️ Lecture 1 - Welcome to STA 210"
-  },
-  {
-    "objectID": "weeks/week-1.html#practice",
-    "href": "weeks/week-1.html#practice",
-    "title": "Week 1",
-    "section": "Practice",
-    "text": "Practice\n📋 AE 0 - Movies"
-  },
-  {
-    "objectID": "weeks/week-1.html#perform",
-    "href": "weeks/week-1.html#perform",
-    "title": "Week 1",
-    "section": "Perform",
-    "text": "Perform\n⌨️ Lab 0 - Meet + greet\n\n\nBack to course schedule ⏎"
+    "text": "coming soon"
   },
   {
     "objectID": "weeks/week-2.html",
     "href": "weeks/week-2.html",
     "title": "Week 2",
     "section": "",
-    "text": "Dairy cow transition management involves a strategic approach to ensure smooth physiological and metabolic shifts during the prepartum and postpartum periods. Focused on optimizing health and milk production, it encompasses dietary adjustments, stress reduction, and monitoring to prevent issues like metabolic disorders and reduced fertility. Balancing nutrition, minimizing environmental stress, and offering appropriate evidence based veterinary care aids in the successful transition from late pregnancy to early lactation, benefiting both cow welfare and farm profitability. Effective transition management enhances milk yield, reproductive efficiency, and overall herd well-being in the critical phase of a dairy cow’s lifecycle.\n\n\n\na\nb\nc"
-  },
-  {
-    "objectID": "weeks/week-2.html#introduction",
-    "href": "weeks/week-2.html#introduction",
-    "title": "Week 2",
-    "section": "",
-    "text": "Dairy cow transition management involves a strategic approach to ensure smooth physiological and metabolic shifts during the prepartum and postpartum periods. Focused on optimizing health and milk production, it encompasses dietary adjustments, stress reduction, and monitoring to prevent issues like metabolic disorders and reduced fertility. Balancing nutrition, minimizing environmental stress, and offering appropriate evidence based veterinary care aids in the successful transition from late pregnancy to early lactation, benefiting both cow welfare and farm profitability. Effective transition management enhances milk yield, reproductive efficiency, and overall herd well-being in the critical phase of a dairy cow’s lifecycle.\n\n\n\na\nb\nc"
-  },
-  {
-    "objectID": "weeks/week-2.html#prepare",
-    "href": "weeks/week-2.html#prepare",
-    "title": "Week 2",
-    "section": "Prepare",
-    "text": "Prepare\n📖 Read the symposium review article on Nutritional strategies to improve health, production and fertility.\n📖 Read the review article on Behavioral needs of the transition cow and considerations for special needs facility design.\n📖 Read the award article on What makes for a good life for transition dairy cows?"
-  },
-  {
-    "objectID": "weeks/week-2.html#participate",
-    "href": "weeks/week-2.html#participate",
-    "title": "Week 2",
-    "section": "Participate",
-    "text": "Participate\n🖥️ Meet the transition experts 1\n🖥️ Feed’n practice lab 2\n🖥️ Meet the transition experts 2"
-  },
-  {
-    "objectID": "weeks/week-2.html#practice",
-    "href": "weeks/week-2.html#practice",
-    "title": "Week 2",
-    "section": "Practice",
-    "text": "Practice\n📋 AE 2 - Evaluate your transition management strategy"
-  },
-  {
-    "objectID": "weeks/week-2.html#perform",
-    "href": "weeks/week-2.html#perform",
-    "title": "Week 2",
-    "section": "Perform",
-    "text": "Perform\n✅ Knowledge challenge week 2\n⌨️ Feed’n practice 2\n📂 Present your transition management strategy\n✅ Knowledge assignment week 2\n\n\nBack to course schedule ⏎"
+    "text": "Coming soon"
   },
   {
     "objectID": "weeks/week-3.html",
     "href": "weeks/week-3.html",
     "title": "Week 1",
     "section": "",
-    "text": "Important\n\n\n\nClasses are virtual this week. Find Zoom links here."
-  },
-  {
-    "objectID": "weeks/week-3.html#prepare",
-    "href": "weeks/week-3.html#prepare",
-    "title": "Week 1",
-    "section": "Prepare",
-    "text": "Prepare\n📖 Read the syllabus\n📖 Read the support resources"
-  },
-  {
-    "objectID": "weeks/week-3.html#participate",
-    "href": "weeks/week-3.html#participate",
-    "title": "Week 1",
-    "section": "Participate",
-    "text": "Participate\n🖥️ Lab 0 -Meet+ greet\n🖥️ Lecture 1 - Welcome to STA 210"
-  },
-  {
-    "objectID": "weeks/week-3.html#practice",
-    "href": "weeks/week-3.html#practice",
-    "title": "Week 1",
-    "section": "Practice",
-    "text": "Practice\n📋 AE 0 - Movies"
-  },
-  {
-    "objectID": "weeks/week-3.html#perform",
-    "href": "weeks/week-3.html#perform",
-    "title": "Week 1",
-    "section": "Perform",
-    "text": "Perform\n⌨️ Lab 0 - Meet + greet\n\n\nBack to course schedule ⏎"
+    "text": "coming soon"
   },
   {
     "objectID": "weeks/week-4.html",
     "href": "weeks/week-4.html",
     "title": "Week 1",
     "section": "",
-    "text": "Important\n\n\n\nClasses are virtual this week. Find Zoom links here."
-  },
-  {
-    "objectID": "weeks/week-4.html#prepare",
-    "href": "weeks/week-4.html#prepare",
-    "title": "Week 1",
-    "section": "Prepare",
-    "text": "Prepare\n📖 Read the syllabus\n📖 Read the support resources"
-  },
-  {
-    "objectID": "weeks/week-4.html#participate",
-    "href": "weeks/week-4.html#participate",
-    "title": "Week 1",
-    "section": "Participate",
-    "text": "Participate\n🖥️ Lab 0 -Meet+ greet\n🖥️ Lecture 1 - Welcome to STA 210"
-  },
-  {
-    "objectID": "weeks/week-4.html#practice",
-    "href": "weeks/week-4.html#practice",
-    "title": "Week 1",
-    "section": "Practice",
-    "text": "Practice\n📋 AE 0 - Movies"
-  },
-  {
-    "objectID": "weeks/week-4.html#perform",
-    "href": "weeks/week-4.html#perform",
-    "title": "Week 1",
-    "section": "Perform",
-    "text": "Perform\n⌨️ Lab 0 - Meet + greet\n\n\nBack to course schedule ⏎"
+    "text": "coming soon"
   },
   {
     "objectID": "weeks/week-5.html",
     "href": "weeks/week-5.html",
     "title": "Week 1",
     "section": "",
-    "text": "Important\n\n\n\nClasses are virtual this week. Find Zoom links here."
-  },
-  {
-    "objectID": "weeks/week-5.html#prepare",
-    "href": "weeks/week-5.html#prepare",
-    "title": "Week 1",
-    "section": "Prepare",
-    "text": "Prepare\n📖 Read the syllabus\n📖 Read the support resources"
-  },
-  {
-    "objectID": "weeks/week-5.html#participate",
-    "href": "weeks/week-5.html#participate",
-    "title": "Week 1",
-    "section": "Participate",
-    "text": "Participate\n🖥️ Lab 0 -Meet+ greet\n🖥️ Lecture 1 - Welcome to STA 210"
-  },
-  {
-    "objectID": "weeks/week-5.html#practice",
-    "href": "weeks/week-5.html#practice",
-    "title": "Week 1",
-    "section": "Practice",
-    "text": "Practice\n📋 AE 0 - Movies"
-  },
-  {
-    "objectID": "weeks/week-5.html#perform",
-    "href": "weeks/week-5.html#perform",
-    "title": "Week 1",
-    "section": "Perform",
-    "text": "Perform\n⌨️ Lab 0 - Meet + greet\n\n\nBack to course schedule ⏎"
+    "text": "coming soon"
   }
 ]
