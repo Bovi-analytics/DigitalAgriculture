@@ -10,11 +10,11 @@ If you have a question during lecture or lab, feel free to ask it! There are lik
 
 ## Office hours
 
-The entire teaching team is here to help you be successful in the course. You are encouraged to ask questions about the course content and assignments. A lot of questions are most effectively answered in-person, so pass by during office hours. I encourage each and every one of you to take advantage of this resource! Make a pledge to stop by office hours at least once during the first three weeks of class. If you truly have no questions to ask, just stop by and say hi and introduce yourself. You can find a list of everyone's office hours [here](/course-team.html).
+The entire teaching team is here to help you be successful in the course. You are encouraged to ask questions about the course content and assignments. A lot of questions are most effectively answered in-person, so pass by during office hours. I encourage each and every one of you to take advantage of this resource! If you truly have no questions to ask, just stop by and say hi and introduce yourself. You can find a list of everyone's office [here](/course-team.html).
 
-## Assesment
+## Weekly assignments
 
-As you can see in the [course overview](/course-overview.html), each week starts with a knowledge challenge. This multiple choice questionaire is intended to challenge the knowledge we expect to be triggered during the current week. We don't see this as a formative test you need to pass but hopefully triggers you on gaps you might have within specific subjects. At the end of the week, a second multiple choice test will hopefully illustrate the progress you have made within the subject.
+As you can see in the [course overview](/course-overview.html), each week holds a 'Programming assignment deadline' at the end of the week. It is important that you stick to these deadlines as your correct submissions for this deadline will be used for the final grading. You are welcome to work on that during the week in your own time, but dedicated hours called 'Statistical Programming (WC)' are blocked within each week. Teaching assistants will be available during these hours if you require help or feedback.
 
 ## Discussion forum
 
@@ -23,18 +23,6 @@ Have a question that might be valuable for all course participant? Prefer to wri
 ## Email
 
 Please refrain from emailing any course content questions (those should go here [github issue](https://github.com/Bovi-analytics/DairyHealthManagment/issues)), and only use email for questions about personal matters that may not be appropriate for the public course forum (e.g., illness, accommodations, etc.). For such matters, you may email Dr. Miel Hostens at [m.m.hostens\@uu.nl](mailto:m.m.hostens@uu.nl).
-
-## Academic support
-
-xxx
-
-## Mental health and wellness
-
-xxx
-
-## **Technology accommodations**
-
-xxx
 
 ## **Course materials costs**
 

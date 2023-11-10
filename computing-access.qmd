@@ -2,8 +2,18 @@
 title: "Computing access"
 ---
 
-To access computing resources for the introductory data science courses offered by the Duke University Department of Statistical Science, go to the [Duke Container Manager](https://cmgr.oit.duke.edu/containers) website, [cmgr.oit.duke.edu/containers](https://cmgr.oit.duke.edu/containers).
+You can choose 2 ways of working with R.
 
-If this is your first time accessing the containers, click on `reserve STA210` on the *Reservations available* menu on the right. You only need to do this once, and when you do, you'll see this container moved to the *My reservations* menu on the left.
+# Offline
 
-Next, click on `STA210` under *My reservations* to access the RStudio instance you'll use for the course.
+You can choose to install R ('*the engine*') and R-studio ('*the dashboard*') on your own computer. This works well when you want to learn to use R in a simple way. The downside if the local approach is that when working in a team the use of additional tools is needed (eg. GitHub).
+
+Follow the Dodona tutorial on the use of R and R studio ([here](https://dodona.be/en/courses/2982/series/32096/activities/1261547186/)).
+
+# Online
+
+To access computing resources for the introductory data science courses offered by Utrecht University we will make use of the [Google Colab](https://colab.research.google.com/) computing services linked to the course drive storage.
+
+If this is your first time accessing Google Colab, make sure you have a registered gmail address. You should have access to [this](https://drive.google.com/drive/folders/0AP9RxLUFwHObUk9PVA) 'Shared drive' in your Google Drive. If not, send an email to the course teacher to get access.
+
+Make sure you get familiar with Google Colab by reading and trying to run your first pieces of code in the '[Welcome To Colaboratory](https://colab.research.google.com/drive/1_qUMu7G1-yFhizqY8TXoxlWo2Nc82IyJ?usp=drive_link)' notebook.

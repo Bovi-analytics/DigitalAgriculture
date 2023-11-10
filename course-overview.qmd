@@ -1,75 +1,102 @@
 ---
-title: "Dairy Health Management"
+title: "Digital Agriculture"
+subtitle: "Dier & Data"
 ---
 
-Dairy health management is a critical aspect of ensuring the well-being and productivity of dairy cattle while maintaining the quality and safety of milk and dairy products. It encompasses a range of practices aimed at preventing, diagnosing, and treating various health issues that can affect dairy animals.
+# Course Description
 
--   Key components of dairy health management include nutrition, disease prevention, reproductive health, and overall herd management. Proper nutrition is essential to meet the dietary needs of cows at different stages of lactation and growth, ensuring optimal milk production and body condition. Disease prevention strategies involve vaccination programs, biosecurity measures, and regular health monitoring to identify and mitigate potential health risks.
+Digital Agriculture is an innovative and interdisciplinary field that leverages technology and data-driven approaches to revolutionize agriculture practices. This course provides an in-depth exploration of the principles, tools, and applications of digital agriculture, equipping students with the knowledge and skills to address the challenges and opportunities in modern agriculture.
 
--   Reproductive health management focuses on maximizing reproductive efficiency through strategies like artificial insemination, heat detection, and monitoring of reproductive cycles. This ensures consistent breeding success and minimizes calving intervals.
+## Course Objectives
 
--   Herd management involves creating comfortable living conditions, proper ventilation, and regular exercise to reduce stress and enhance cow comfort. Additionally, the implementation of proper milking protocols and hygiene practices ensures the production of safe and high-quality milk.
+1.  Understand the fundamentals of digital agriculture and its current challenges.
 
--   Advancements in technology have revolutionized dairy health management with the use of data-driven tools like sensors, wearable devices, and data analytics. These technologies enable real-time monitoring of vital parameters, early disease detection, and more precise management practices.
+2.  Explore the various technologies, precision farming techniques and digital tools used in agriculture.
 
-In conclusion, dairy health management is pivotal in maintaining the health, well-being, and productivity of dairy cattle. A holistic approach that integrates nutrition, disease prevention, reproductive health, and advanced technologies is crucial for sustainable dairy farming and the production of safe, nutritious dairy products.
+3.  Perform data collection, visualisation, analysis, and interpretation in digital agriculture.
 
-**1. Understand Dairy Animal Physiology:** Develop a comprehensive understanding of the anatomical and physiological aspects of dairy animals, including their digestive system, reproductive system, immune response, and metabolic processes.
+4.  Develop practical skills through hands-on programming activities.
 
-**2. Identify Common Health Issues:** Gain the ability to recognize and diagnose prevalent health issues in dairy cattle, such as mastitis, metabolic disorders, lameness, and reproductive challenges, through clinical observation and diagnostic tools.
+5.  Explore the applications of artificial intelligence and machine learning in agriculture.
 
-**3. Implement Disease Prevention Strategies:** Learn to design and implement effective disease prevention strategies, including vaccination programs, biosecurity measures, and proper hygiene practices, to minimize disease outbreaks and maintain herd health.
+6.  Understand the importance of data privacy and security in digital agriculture.
 
-**4. Optimize Nutrition and Feeding:** Acquire knowledge of dairy cow nutritional requirements at different stages of lactation and growth, and develop skills to formulate balanced diets that promote optimal milk production, body condition, and overall health.
+7.  Evaluate the economic, environmental, and social impacts of digital agriculture.
 
-**5. Master Reproductive Management:** Develop expertise in reproductive management techniques, including artificial insemination, heat detection, synchronization protocols, and pregnancy diagnosis, to maximize breeding success and minimize calving intervals.
+## Course Outline
 
-**6. Apply Advanced Technologies:** Explore the integration of modern technologies such as wearable sensors, data analytics, and precision farming tools to monitor health parameters in real-time, enabling early disease detection and informed decision-making.
+### Week 1: Introduction to Digital Agriculture
 
-**7. Design Cow Comfort and Housing:** Learn to create and maintain comfortable housing environments that address factors like ventilation, space, and bedding, promoting cow comfort, reducing stress, and preventing health issues.
+\- Historical perspective and digital transformation of agriculture and its challenges
 
-**8. Practice Effective Milking Protocols:** Understand proper milking techniques, udder health management, and milking equipment hygiene to ensure the production of safe, high-quality milk while minimizing the risk of mastitis.
+\- Challenges of data privacy in agriculture (incl. legal considerations)
 
-**9. Develop Herd Health Management Plans:** Develop the skills to design comprehensive herd health management plans tailored to the specific needs of a dairy operation, considering factors like herd size, facilities, and available resources.
+\- Economic benefits and challenges
 
-**10. Promote Sustainable Dairy Farming:** Gain insights into sustainable practices that balance economic, environmental, and social aspects of dairy farming, ensuring long-term profitability while prioritizing animal welfare and environmental stewardship.
+\- Social and ethical considerations
 
-By the end of this course, students will be equipped with the knowledge and skills necessary to effectively manage the health and well-being of dairy cattle, thereby contributing to improved productivity, the production of safe dairy products, and the overall success of dairy farming operations.
+### Week 2: Data in Agriculture
 
-The learning objectives of this course are listed underneath the picture. These learning goals will be reached through iterations of the [double diamond](https://en.wikipedia.org/wiki/Double_Diamond_(design_process_model)) approach as illustrated for any dairy process in the picture underneath. The double diamond will be used throughout the course.
+\- Data collection methods (sensors, satellites, etc.)
 
-![](images/DoubleDiamond.png){fig-alt="An illustration on the double diamond" width="1250"}
+\- Data analysis and visualization tools
 
-# Common learning objectives with SHM & PHM
+\- Data-driven decision-making in farming
 
-This course is closely linked to 3 other courses within the Master in Veterinary Medicine curriculum, specifically, this course shares the following learning objectives with Swine Health Management and Poultry Health Management:
+### Week 3: Technologies in Agriculture
 
-1.  The student is able to recognize relevant deviations from the normal picture and to link this to pathophysiological processes and diseases of the organ systems.
+\- Principles of precision agriculture
 
-2.  The student is able to systematically communicate his findings obtained through anamnesis, key figures and clinical research.
+\- Farm management systems
 
-3.  The student is able to use the right additional diagnostics based on knowledge of pathological processes, immunological principles and knowledge of new diagnostic techniques (Precision Livestock Farming).
+\- Farm machinery and automation
 
-4.  The student knows how to diagnose the common disorders at individual and couple level and to advise the cattle farmer, both curatively and preventively.
+### Week 4: Artificial Intelligence and Machine Learning
 
-5.  The student has insight into the business processes (management, nutrition, breeding, housing and climate, biosecurity, infection prevention, economy) on a cattle farm, and the effects of this on animal health, animal welfare and products and product quality, also in relation to the requirements of the customers (incl. society).
+\- Introduction to AI and ML in agriculture
 
-6.  The student acquires insight into the data in the field of animal health, animal welfare, production and product quality that are available on a cattle farm, how these are recorded, and what the meaning and coherence of this is.
+## Course Format
 
-7.  The student can deal with the collection and analysis of data and draw conclusions from this for the business operations on the cattle farm.
+This course will consist of a combination of lectures, hands-on practical sessions, case studies, group discussions, and guest lectures from industry experts. Students will also have the opportunity to work on a real-world project related to digital agriculture.
 
-8.  The student knows how to place the cattle farm among the other stakeholders in the sector.
+### Course textbook
 
-9.  The student knows the public and private regulations that affect the work of the veterinarian on cattle farms.
+While there is no official textbook for the course, we will be assigning readings from the following textbooks.
 
-10. The student knows what the earnings model of livestock farmers looks like, and can name and calculate the economic consequences of an animal disease and/or change in business operations.
+-   [R for Data Science](https://r4ds.had.co.nz/) by Garret Grolemund and Hadley Wickham.
 
-11. The student knows how to make a strength and weakness analysis of a cattle farm and knows how to prioritize risk factors.
+-   Weekly assignments come from the [Introduction to Data Science](https://rafalab.dfci.harvard.edu/dsbook-part-1/) handbook by Rafael Irizarry.
 
-12. The student works evidence-based in all his work.
+### Lectures and labs
 
-13. The student knows how a cattle farm can produce sustainably and is aware of the future challenges of the sector.
+The goal of both the lectures and the labs is for them to be as interactive as possible. My role as instructor is to introduce you new tools and techniques, but it is up to you to take them and make use of them. A lot of what you do in this course will involve writing code, and coding is a skill that is best learned by doing. Therefore, as much as possible, you will be working on a variety of tasks and activities throughout each lecture and lab. You are expected to attend all lecture and lab sessions and meaningfully contribute to in-class exercises and discussion. Additionally, some lectures will feature assignments that will be graded. In addition to application exercises will be periodic activities help build a learning community. These will be short, fun activities that will help everyone in the class connect throughout the semester.
 
-14. The student can create a strategic health plan.
+You are expected to bring a laptop to each class so that you can take part in the in-class exercises. Please make sure your laptop is fully charged before you come to class as the number of outlets in the classroom might not be sufficient to accommodate everyone.
 
-15. The student is able to assess animal welfare and can give advice at farm level to safeguard and improve the welfare of animals.
+## Course Assessment
+
+Assessment methods may include individual assignments, presentations and a final group project assesment.
+
+By the end of this course, students will have gained a comprehensive understanding of how digital technologies are transforming agriculture and will be well-equipped to contribute to the advancement of sustainable and efficient farming practices in the digital age.
+
+# Utrecht Community Standard
+
+```{=html}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_KN97j30ST4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> </iframe>
+```
+## Inclusive community
+
+It is my intent that students from all diverse backgrounds and perspectives be well-served by this course, that students' learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength, and benefit. It is my intent to present materials and activities that are respectful of diversity and in alignment with xxx. Your suggestions are encouraged and appreciated. Please let me know ways to improve the effectiveness of the course for you personally, or for other students or student groups.
+
+Furthermore, I would like to create a learning environment for my students that supports a diversity of thoughts, perspectives and experiences, and honors your identities. To help accomplish this:
+
+-   If you feel like your performance in the class is being impacted by your experiences outside of class, please don't hesitate to come and talk with me. If you prefer to speak with someone outside of the course, your academic dean is an excellent resource.
+-   I (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please let me or a member of the teaching team know.
+
+## Communication
+
+All lecture notes, assignment instructions, an up-to-date schedule, and other course materials may be found on the course website at [bovi-analytics.github.io/DigitalAgriculture/](https://bovi-analytics.github.io/DigitalAgriculture/).
+
+I will regularly send course announcements via email or others, make sure to check one or the other of these regularly.
+
+# 
