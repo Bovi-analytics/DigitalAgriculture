@@ -1,13 +1,12 @@
 ---
-title: "Welcome to Dairy Health Management!"
-subtitle: "DHM - Spring 2024"
+title: "Lecture 1 - Meet + greet"
+subtitle: "D&D DM-P-DD - Fall 2023"
 author: "Ass. Prof. Dr. Miel Hostens"
-footer:  "[https://github.com/Bovi-analytics/DairyHealthManagement](https://bovi-analytics.github.io/DairyHealthManagement/)"
-logo: "images/UtrechtUniversityLogo.png"
+footer:  "[https://bovi-analytics.github.io/DigitalAgriculture/](https://bovi-analytics.github.io/DigitalAgriculture/)"
+logo: "images/Bovi-Analytics-SmallLogo.png"
 format: 
   revealjs: 
     theme: slides.scss
-    multiplex: true
     transition: fade
     slide-number: true
 editor: visual
@@ -22,7 +21,7 @@ library(countdown)
 
 # Welcome
 
-## Meet the teachers
+## Meet the teacher
 
 ::: columns
 ::: {.column width="50%"}
@@ -39,133 +38,145 @@ library(countdown)
 :::
 :::
 
-## Meet the [experts](/course-team.html)
+## Meet your teacher, when he was young!
 
--   Peter Vos
--   Hilde Aardema
--   Thomas Schoonewille
+![](images/lec-1/MielHostens2.png)
+
+## Meet your team partners
+
+-   What is your background in agriculture?
+
+-   What is the main reason to subscribe to the course?
+
+-   What do you really hope to learn?
+
+-   Do you have any coding experience?
+
+## Meet the other [experts](/course-team.html)
+
+-   Belen Rabaglino
+
+-   Yara Slegers
+
+-   Hans Vernooij
+
 -   ...
 
-## Check out Teams
+# Digital Agriculture
 
--   Go to [Teams](https://teams.microsoft.com/l/team/19%3a6e41f5c96c484f999ac0a4f194b97945%40thread.tacv2/conversations?groupId=be785343-93a9-4c92-ad90-ed2998b8253e&tenantId=d72758a0-a446-4e0f-a0aa-4bf95a4a10e7)
--   Answer the discussion question: How are you doing?
-
-# Dairy Health Management
-
-## What is Dairy Health Management
+## What is Digital Agriculture
 
 ::: {style="font-size: 0.8em;"}
-> "Dairy health management is a critical aspect of ensuring the well-being and productivity of dairy cattle while maintaining the quality and safety of milk and dairy products. It encompasses a range of practices aimed at preventing, diagnosing, and treating various health issues that can affect dairy animals."
+> "Digital agriculture refers to the use of digital technologies, information, and communication tools in various aspects of agriculture to enhance productivity, efficiency, and sustainability. This field leverages advancements in technology, such as sensors, automation, data analytics, and connectivity, to collect, analyze, and apply data-driven insights to agricultural practices.
 :::
 
 # Course learning goals and philosophy
 
 ## Course learning objectives (part 1)
 
-1.  Understand Dairy Animal Physiology
-2.  Identify Common Health Issues
-3.  Implement Disease Prevention Strategies
-4.  Optimize Nutrition and Feeding
-5.  Master Reproductive Management
+1.  Understand the fundamentals of digital agriculture and its current challenges.
+
+2.  Explore the various technologies, precision farming techniques and digital tools used in agriculture.
+
+3.  Perform data collection, visualisation, analysis, and interpretation in digital agriculture.
+
+4.  Develop practical skills through hands-on programming activities.
 
 ## Course learning objectives (part 2)
 
-1.  Apply Advanced Technologies
-2.  Design Cow Comfort and Housing
-3.  Practice Effective Milking Protocols
-4.  Develop Herd Health Management Plans
-5.  Promote Sustainable Dairy Farming
+1.  Explore the applications of artificial intelligence and machine learning in agriculture.
+
+2.  Understand the importance of data privacy and security in digital agriculture.
+
+3.  Evaluate the economic, environmental, and social impacts of digital agriculture.
 
 ## Topics that will be covered
 
 ::: incremental
--   Week 1 - Youngstock management
--   Week 2 - Transition management
--   Week 3 - Reproduction management
--   Week 4 - Infectious disease management
--   Week 5 - Mastitis & claw health management
+-   Week 1 - Introduction, programming and team project kick-off
+-   Week 2 - Data in agriculture
+-   Week 3 - Technologies in agriculture
+-   Week 4 - Artificial Intelligence and Machine Learning
+-   Week 5 - ...
 :::
 
-## Double diamond principle
+## Weekly programming assignment
 
--   These learning objectives will be activated through weekly iterations of the [double diamond](https://en.wikipedia.org/wiki/Double_Diamond_(design_process_model)) approach as illustrated for any dairy process in the next slide.
+-   One of the learning goals is to actively stimulate you by weekly programming assignments & assessments
 
--   The double diamond principle will be used throughout the course, and will hopefully help you to understand more complex future (herd health management) issues you encounter in your future work.
+-   We will use the [Dodona](https://dodona.be/) platform for that. Make sure to try if you have access to the course.
 
-## Double diamond principle
+-   [Link to the course](https://dodona.be/en/courses/2982/?secret=jniug)
 
-![Source: [Wikipedia](https://en.wikipedia.org/wiki/Double_Diamond_(design_process_model))](images/lec-1/DoubleDiamond.png){width="451"}
+## Weekly programming assignment
 
-## Course FAQ
+Sign in to Dodona using your Utrecht sign-in
 
-::: incremental
--   **What background is assumed for the course?** Definitely the *Sustainable Animal Production Chains* course.
--   **Will we be doing practical things ?** Yes. You will be assigned one farm which will be used throughtout the course. You are assumed to visit this farm regularly.
--   **Will we learn the theory or practical dairy health management?** Hopefully BOTH. The course is mainly intended to build on existing knowledge acquired during the bachelor courses. The theoretical background will be activated with theoretical courses, meet the experts and hands-on labs.
-:::
+![](images/lec-1/Dodona.png){width="957" height="62"}
+
+## Weekly programming assignment
+
+Subscribe to this course
+
+![](images/lec-1/Dodona2.png){width="186"}
+
+## Weekly programming assignment
+
+<div>
+
+**Make sure to reach each of the deadlines**
+
+| Deadline           | Assignment         |
+|--------------------|--------------------|
+| Fr, Nov 17th 17:00 | R Basics           |
+| Fr, Nov 24th 17:00 | Programming basics |
+| Fr. Dec 1st 17:00  | The tidyverse      |
+| Fr, Dec 8th 17:00  | Importing Data     |
+| Fr, Dec 15th 17:00 | TBD                |
+
+</div>
 
 # Course overview
 
 ## Homepage
 
-[https://github.com/Bovi-analytics/DairyHealthManagement](https://bovi-analytics.github.io/DairyHealthManagement/)
+[https://github.com/Bovi-analytics/](https://bovi-analytics.github.io/DairyHealthManagement/)[Digital Agriculture](https://bovi-analytics.github.io/DigitalAgriculture)
 
 -   All relevant course materials (and history)
--   Links to Teams, GitHub, Feed'n practice, etc.
+-   Links to Teams, GitHub, Dodona, etc.
 -   Let's take a tour!
 
 ## Activities: Prepare, Participate, Practice, Perform {.smaller}
 
--   **Prepare:** Introduce new content and prepare for lectures by completing the readings (and sometimes watching the videos)
--   **Participate:** Attend and actively participate in lectures and labs, office hours, herd visits
--   **Practice:** Practice applying dairy health management concepts and nutitional management
+-   **Prepare:** Introduce new content and prepare for lectures by completing the readings
+-   **Participate:** Attend and actively participate in lectures and labs, herd visits
+-   **Practice:** Practice your programming skills
 -   **Perform:** Put together what you've learned to analyze real-world data
-    -   Feed'n practice x 5
-    -   Knowledge challenges x 5 (individual)
-    -   Farm peer-presentations (teams)
-    -   Knowledge exams x 5 (individual)
-
-## Recurring weekly pattern
-
-::: incremental
--   **Knowledge challenge:** Each Monday starts with a knowledge challenge. This is not an official exam but will hopefully challenge on gaps in your current knowledge.
--   **Meet the experts:** Twice a week (Monday and Wednesday afternoon), several experts will cover the week's topic in interactive sessions (to get most out of this, be prepared).
--   **Feed'n practice:** Every Tuesday afternoon, practical labs will be held to increase your dairy nutrition skills.
--   **Peer presentation:** Every Friday, each of the teams will present their farms approach to the management of the topic covered during that week.
--   **Knowledge check:** Friday afternoon, a knowledge check will be held to check your progress in practical and theoretical knowledge from the weeks' topic.
-:::
-
-## Teams
-
--   Team assignments
-    -   Assigned by us
-    -   Application exercises, labs, and project
-    -   Peer evaluation during teamwork and after completion
--   Expectations and roles
-    -   Everyone is expected to contribute equal *effort*
-    -   Everyone is expected to understand *all* material presented
-    -   Individual contribution evaluated by peer evaluation, commits, etc.
+    -   Dodona assignments x 5
 
 ## Grading {.smaller}
 
-| Category | Percentage |
-|----------|------------|
-| TBD      | 100%       |
+The overall team project score will be multiplied by the % of correctly submitted weekly assignments individually.
 
-See [course syllabus](https://sta210-s22.github.io/website/course-syllabus.html) for how your final grade will be determined.
+Example:
+
+-   Your team project is graded as a group to 16/20
+
+-   You individually submitted 80% correct assignments
+
+-   Your end score is 0.8\*16/20 = 12.8/20
 
 ## Support
 
--   Attend office hours
+-   Office hours
 -   Ask (or even better help answering) questions during the course!!!
+-   Teams
 -   Reserve email for questions on personal matters
--   Read the [course support](https://sta210-s22.github.io/website/course-support.html) page
 
 ## Announcements
 
--   Posted on [Blackboard](https://uu.blackboard.com/) (Announcements tool) and sent via email, be sure to check both regularly
--   I'll assume that you've read an announcement by the next "business" day
+-   During classes or email
+-   If unclear, contact me
 
 ## Diversity + inclusion {.smaller}
 
@@ -173,57 +184,20 @@ It is my intent that students from all diverse backgrounds and perspectives be w
 
 ::: incremental
 -   If you have a name that differs from those that appear in your official records, please let me know!
--   Please let me know your preferred pronouns. You'll also be able to note this in the Getting to know you survey.
--   If you feel like your performance in the class is being impacted by your experiences outside of class, please don't hesitate to come and talk with me. I want to be a resource for you. If you prefer to speak with someone outside of the course, your advisers and deans are excellent resources.
--   I (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by me or anyone) that made you feel uncomfortable, please talk to me about it.
+-   Please let me know your preferred pronouns.
+-   If you feel like your performance in the class is being impacted by your experiences outside of class, please don't hesitate to come and talk with me. I want to be a resource for you.
+-   If something was said in class (by me or anyone) that made you feel uncomfortable, please talk to me about it.
 :::
-
-# Double Diamond Farms
-
-## Discover, Define, Develop, Deliver
-
-To maximize knowledge activation, a real dairy farm will be put at your team's disposal during this DHM course.
-
-These farms have committed to activally participate:
-
--   Allow farm visits (max n= TBD) to discover how specific aspects on the farm are managed (eg milking procedure).
-
--   Share current and historical information on management aspects such as:
-
-    -   Management data
-
-    -   Milk recordings
-
-    -   Nutritition
-
-    -   Genetics
-
-    -   Laboratory results and disease status
-
-## Deliver
-
-At the end of the week, your team is expected to present your farm's approach towards that weeks health topic to your peers using the acquired knowledge.
 
 # Course policies
 
-## Late work, waivers, regrades policy
+## Team project
 
--   We have policies!
--   Read about them on the [course syllabus](https://sta210-s22.github.io/website/course-syllabus.html) and refer back to them when you need it
+-   **Team update fridays** are supposed to be completed collaboratively.
 
-## Collaboration policy
+-   Most of the times we will meet in classrooms at the **Martinus G. de Bruin** building.
 
--   **Peer presentations** (Fridays) are supposed to be completed collaboratively.
-
--   **Knowledge challenges** (Mondays) and **Knowledge checks** (Fridays) must be completed individually. You may **not** directly share answers with others, however you are welcome to discuss the problems in general and ask for advice.
-
-## Sharing / reusing farm information from previous DHM courses
-
--   We are aware that as this course will take place several times a year, previous teams will have worked on specific health management topics on the farm.
-
--   Be awere that Dairy Health Management is a continuously changing and dynamic component of herd health.
-
--   We encourage you to progress on previous insights, copy-pasting will be evaluated accordingly (see [Policies Utrecht University](https://students.uu.nl/en/practical-information/policies-and-procedures/fraud-and-plagiarism)).
+-   Team updates will be at the [Future Learning Spaces](https://www.uu.nl/onderwijs/future-learning-spaces/learning-spaces/teaching-learning-lab) at the Buys Ballotgebouw; rooms 3.19 or 3.22, unless communicated otherwise.
 
 ## Academic integrity
 
@@ -239,34 +213,29 @@ At the end of the week, your team is expected to present your farm's approach to
 
 -   Be aware that
 
-    -   the participating dairy farmers are sharing sometimes sensitive and personal data with you.
+    -   the participating farmers are sharing sometimes sensitive and personal data with you (part of the course).
 
     -   you are supposed to use that data for educational purposes only.
 
     -   your professional conduct is expected.
 
--   Misuse of the data
-
-    -   will be punished.
-
-    -   influences future participation of the collaborating farms.
+    -   you influence future participation of the collaborating farm(s).
 
 ## Most importantly!
 
 Ask if you're not sure if something violates a policy!
 
-# Making DHM a success
+# Making Digital Agriculture a success
 
 ## Five tips for success
 
-1.  Read all the preparation material before the week begins.
-2.  Ask questions.
-3.  Participate in the meet the expert class.
-4.  Actively perform feed'n practices labs.
-5.  Don't procrastinate and don't let a week pass by with lingering questions.
+1.  Help me understanding your needs as well.
+2.  Read all the preparation material (if provided) before the lesson begins.
+3.  Ask questions and actively collaborate with entire team.
+4.  Perform the programming assignments.
+5.  Don't let a week pass by with lingering questions.
 
 ## This week's first tasks
 
--   Read the syllabus
--   Get a MmmooOgle Feed account if you don't have one, you'll need it for tomorrow's first lab
--   Fill in the first knowledge challenge know
+-   Get a Dodona account if you don't have one, you'll need it for Wednesday first lab.
+-   Communicate your Gmail account with m.m.hostens\@uu.nl so I can connect you to the Digital Agriculture Google Drive and Google Colab environment.
