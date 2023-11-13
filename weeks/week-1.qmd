@@ -4,4 +4,48 @@ subtitle: "Welcome to Digitial Ag"
 editor: visual
 ---
 
-coming soon
+# Introduction
+
+Welcome to the exciting realm of Digital Agriculture! In this innovative course, we delve into the intersection of cutting-edge technologies and traditional farming practices. Explore how data analytics, sensor technologies, and precision farming methods revolutionize animal management, resource optimization, and decision-making processes. Gain insights into the transformative potential of digital tools in enhancing agricultural sustainability and productivity. Whether you're an early-stage veterinary MSc or a tech enthusiast, join us on a journey to harness the power of digital advancements for a smarter and more efficient future in agriculture.
+
+# Learning goals
+
+1.  Introduction to the 'Digital Agriculture' course
+
+2.  Get to know the team and initiate the main project
+
+3.  Get to know R
+
+4.  Submit programming assignment by Friday 17:00
+
+# Topics
+
+## Introduction to statistical programming (WC)
+
+📖 Within the statistical programming labs, we will follow the [Introduction to Data Science](https://rafalab.dfci.harvard.edu/dsbook-part-1/) handbook by Rafael Irizarry.
+
+📧 Send email with your Gmail address to me (m.m.hostens\@uu.nl) so I can give you access to Google Drive and Google Colab.
+
+💻 You will have to install R & R-studio on your computer.
+
+## A guideline to reproducible & FAIR data science (IC)
+
+📺 Get familiar with FAIR by looking at [this video](https://www.youtube.com/watch?v=K40utIzUzOk).
+
+📖 Read the intial [publication](https://www.nature.com/articles/sdata201618) on *The FAIR Guiding Principles for scientific data management and stewardschip.*
+
+🔬 Explore the [vision of Utrecht University on FAIR principles](https://www.uu.nl/en/research/research-data-management/guides/how-to-make-your-data-fair) and their [cheatsheets](https://github.com/UtrechtUniversity/FAIR-Cheatsheets/blob/main/cheatsheets/FAIR_data_publishing/cheatsheet_FAIR_data_publishing.pdf).
+
+💻 Get familiar with GIT and GITHUB through [this tutorial](https://www.uu.nl/en/research/research-data-management/tools/software-and-computing/github-and-git).
+
+🧑🏽‍🏫 Discuss with the entire team and Dr. Miel Hostens (contact him on his desk) on how this will reflect on your team project.
+
+## Challenges of data privacy (IC)
+
+💻 Follow the e-learning module on '[Privacy basics for researchers](https://ulearning.uu.nl/course/view.php?id=838)' during the planned moment.
+
+🧑🏽‍🏫 Discuss with the entire team and Dr. Hans Vernooij (contact him on his desk) on the impact for the team project.
+
+::: {style="font-size: 0.875em;"}
+Back to [course schedule](/ "Course schedule") ⏎
+:::
