@@ -77,8 +77,8 @@ website:
             text: "Week 5"
       - section: "Supplemental notes"
         contents:
-          - href: supplemental/extra-1.qmd
-            text: Extra
+          - href: supplemental/operations-in-r.qmd
+            text: Operations in R
 
 
 format:
