@@ -36,7 +36,7 @@ Welcome to the exciting realm of Digital Agriculture! In this innovative course,
 
 🔬 Explore the [vision of Utrecht University on FAIR principles](https://www.uu.nl/en/research/research-data-management/guides/how-to-make-your-data-fair) and their [cheatsheets](https://github.com/UtrechtUniversity/FAIR-Cheatsheets/blob/main/cheatsheets/FAIR_data_publishing/cheatsheet_FAIR_data_publishing.pdf).
 
-💻 Get familiar with GIT and GITHUB through [this tutorial](https://www.uu.nl/en/research/research-data-management/tools/software-and-computing/github-and-git).
+💻 Check for reproducible advise in the [tutorials](https://bovi-analytics.com/tutorials/) at the bovi-analytics website.
 
 🧑🏽‍🏫 Discuss with the entire team and Dr. Miel Hostens (contact him on his desk) on how this will reflect on your team project.
 
