@@ -16,7 +16,7 @@ editor: visual
 
 ## Modelling biological linear processes (WC)
 
-📖 Re-familiarize yourself with linear regression models using the bachelor material which is available [here](weeks/week2/Statistiek_epidemiologie_en_economie.pdf) and [here](weeks/week2/Werkcolleges en Zelfstudies Blok EE 2022.pdf).
+📖 Re-familiarize yourself with linear regression models using the bachelor material which is available [here](weeks/week2/Statistiek_epidemiologie_en_economie.pdf) and [here](weeks/week2/Werkcolleges%20en%20Zelfstudies%20Blok%20EE%202022.pdf).
 
 ## Visualisation techniques for biological processes (WC)
 
