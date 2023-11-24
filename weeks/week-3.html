@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Digital Agriculture - Week 1</title>
+<title>Digital Agriculture - Week 3</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -63,11 +63,11 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="Digital Agriculture - Week 1">
-<meta property="og:description" content="Welcome Digital Ag">
+<meta property="og:title" content="Digital Agriculture - Week 3">
+<meta property="og:description" content="Data transformation techniques">
 <meta property="og:site-name" content="Digital Agriculture">
-<meta name="twitter:title" content="Digital Agriculture - Week 1">
-<meta name="twitter:description" content="Welcome Digital Ag">
+<meta name="twitter:title" content="Digital Agriculture - Week 3">
+<meta name="twitter:description" content="Data transformation techniques">
 <meta name="twitter:image" content="https://bovi-analytics.github.io/DigitalAgriculture/weeks/images/twitter-card.png">
 <meta name="twitter:creator" content="@MielHostens">
 <meta name="twitter:card" content="summary_large_image">
@@ -269,15 +269,24 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#data-transformation-techniques---logical-vectors-and-numbers-wc" id="toc-data-transformation-techniques---logical-vectors-and-numbers-wc" class="nav-link active" data-scroll-target="#data-transformation-techniques---logical-vectors-and-numbers-wc">Data transformation techniques - logical vectors and numbers (WC)</a></li>
+  <li><a href="#data-transformation-techniques---strings-and-regular-expressions-wc" id="toc-data-transformation-techniques---strings-and-regular-expressions-wc" class="nav-link" data-scroll-target="#data-transformation-techniques---strings-and-regular-expressions-wc">Data transformation techniques - Strings and regular expressions (WC)</a></li>
+  <li><a href="#data-transformation-techniques---factors-datatimes-and-missing-values-wc" id="toc-data-transformation-techniques---factors-datatimes-and-missing-values-wc" class="nav-link" data-scroll-target="#data-transformation-techniques---factors-datatimes-and-missing-values-wc">Data transformation techniques - Factors, datatimes and missing values (WC)</a></li>
+  <li><a href="#data-transformation-techniques---join-and-aggregation-methods-wc" id="toc-data-transformation-techniques---join-and-aggregation-methods-wc" class="nav-link" data-scroll-target="#data-transformation-techniques---join-and-aggregation-methods-wc">Data transformation techniques - join and aggregation methods (WC)</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/Bovi-analytics/DigitalAgriculture/edit/main/weeks/week-3.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/Bovi-analytics/DigitalAgriculture/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Week 1</h1>
-<p class="subtitle lead">Welcome Digital Ag</p>
+<h1 class="title">Week 3</h1>
+<p class="subtitle lead">Data transformation techniques</p>
 </div>
 
 
@@ -292,9 +301,38 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>coming soon</p>
+<p>In this week of the course, you'll learn about the most important types of variables that you'll encounter inside a data frame and learn the tools you can use to manipulate them.</p>
+<p>We will go through the chapters from the <a href="https://r4ds.hadley.nz/">R for Data Science (2nd edition)</a> book as you will need these techniques for your project; they're designed to be largely standalone so that they can be read in advance.</p>
+<section id="data-transformation-techniques---logical-vectors-and-numbers-wc" class="level2">
+<h2 class="anchored" data-anchor-id="data-transformation-techniques---logical-vectors-and-numbers-wc">Data transformation techniques - logical vectors and numbers (WC)</h2>
+<ul>
+<li><p><a href="https://r4ds.hadley.nz/logicals">Chapter&nbsp;12</a> teaches you about logical vectors. These are the simplest types of vectors, but are extremely powerful. You'll learn how to create them with numeric comparisons, how to combine them with Boolean algebra, how to use them in summaries, and how to use them for condition transformations.</p></li>
+<li><p><a href="https://r4ds.hadley.nz/numbers">Chapter&nbsp;13</a> dives into tools for vectors of numbers, the powerhouse of data science. You'll learn more about counting and a bunch of important transformation and summary functions.</p></li>
+</ul>
+</section>
+<section id="data-transformation-techniques---strings-and-regular-expressions-wc" class="level2">
+<h2 class="anchored" data-anchor-id="data-transformation-techniques---strings-and-regular-expressions-wc">Data transformation techniques - Strings and regular expressions (WC)</h2>
+<ul>
+<li><p><a href="https://r4ds.hadley.nz/strings">Chapter&nbsp;14</a> will give you the tools to work with strings: you'll slice them, you'll dice them, and you'll stick them back together again. This chapter mostly focuses on the stringr package, but you'll also learn some more tidyr functions devoted to extracting data from character strings.</p></li>
+<li><p><a href="https://r4ds.hadley.nz/regexps">Chapter&nbsp;15</a> introduces you to regular expressions, a powerful tool for manipulating strings. This chapter will take you from thinking that a cat walked over your keyboard to reading and writing complex string patterns.</p></li>
+</ul>
+</section>
+<section id="data-transformation-techniques---factors-datatimes-and-missing-values-wc" class="level2">
+<h2 class="anchored" data-anchor-id="data-transformation-techniques---factors-datatimes-and-missing-values-wc">Data transformation techniques - Factors, datatimes and missing values (WC)</h2>
+<ul>
+<li><p><a href="https://r4ds.hadley.nz/factors">Chapter&nbsp;16</a> introduces factors: the data type that R uses to store categorical data. You use a factor when variable has a fixed set of possible values, or when you want to use a non-alphabetical ordering of a string.</p></li>
+<li><p><a href="https://r4ds.hadley.nz/datetimes">Chapter&nbsp;17</a> will give you the key tools for working with dates and date-times. Unfortunately, the more you learn about date-times, the more complicated they seem to get, but with the help of the lubridate package, you'll learn to how to overcome the most common challenges.</p></li>
+</ul>
+</section>
+<section id="data-transformation-techniques---join-and-aggregation-methods-wc" class="level2">
+<h2 class="anchored" data-anchor-id="data-transformation-techniques---join-and-aggregation-methods-wc">Data transformation techniques - join and aggregation methods (WC)</h2>
+<ul>
+<li><p><a href="https://r4ds.hadley.nz/missing-values">Chapter&nbsp;18</a> discusses missing values in depth. We've discussed them a couple of times in isolation, but now it's time to discuss them holistically, helping you come to grips with the difference between implicit and explicit missing values, and how and why you might convert between them.</p></li>
+<li><p><a href="https://r4ds.hadley.nz/joins">Chapter&nbsp;19</a> finishes up this part of the book by giving you tools to join two (or more) data frames together. Learning about joins will force you to grapple with the idea of keys, and think about how you identify each row in a dataset.</p></li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -663,7 +701,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-left">© Copyright 2023, Miel Hostens</div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/Bovi-analytics/DigitalAgriculture/edit/main/weeks/week-3.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/Bovi-analytics/DigitalAgriculture/issues/new" class="toc-action">Report an issue</a></p></div></div></div>
+    </div>
     <div class="nav-footer-right">This page is built with <a href="https://quarto.org/">Quarto</a>.</div>
   </div>
 </footer>
