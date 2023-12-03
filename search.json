@@ -165,7 +165,7 @@
     "href": "index.html",
     "title": "Digital Agriculture",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the course. Note that this schedule will be updated as the course progresses, with all changes documented here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nTeachers\nPrepare\nSlides\nCode’n Practice\nAssignment\nProject\n\n\n\n\n1\nMon, 9:00-9:45\nWelcome to Digital Ag (HC)\nMiel Hostens\n\n🖥️\n\n\n\n\n\n\nMon, 10:00-10:45\nIntroduction to statisticalprogramming (WC)\nMiel Hostens & Belen Rabaglino\n📖\n🖥️\n\n\n\n\n\n\nMon, 11:00-11h45\nDigital transformations in livestock and agriculture (IC) - Part A\nMiel Hostens\n\n🖥️\n\n\n\n\n\n\nMon, 11:00-11h45\nDigital transformations in livestock and agriculture (IC) - Part B\n\n\n\n\n\n\n\n\n\nMon, 13:15-15:00\nIntroduction to team project (WC)\nMiel Hostens\n\n\n\n\n📂\n\n\n\nMon, 15:15-17:00\nA guideline to reproducible & FAIR data science (IC)\nMiel Hostens\n📖\n\n\n\n\n\n\n\nTue, 13:00-17:00\nTeam project - farm visit\nOn your own\n\n\n\n\n\n\n\n\nWed, 13:15-17:00\nStatistical programming (WC)\nYara Slegers & Belen Rabaglino\n📖\n\n💻\n\n\n\n\n\nTh, 9:00-12:00\nChallenges of data privacy (IC)\nHans vernooij\n📖\n🖥️\n\n\n\n\n\n\nFr, 11:00-12:45\nUpdate on team project (WC)\nMiel Hostens\n\n\n\n\n📂\n\n\n\nFr, 17:00\nProgramming assignment deadline\n\n\n\n\n📋\n\n\n\n2\nMon, 11:00-12:45\nModelling biological linear processes (WC)\nJan van den Broek\n📖\n\n\n\n\n\n\n\nTue, 13:15-17:00\nVisualisation techniques for biological processes (WC)\nMiel Hostens\n📖\n🖥️\n\n\n\n\n\n\nWed, 13:15-17:00\nR Programming (WC)\nYara Slegers & Belen Rabaglino\n📖\n\n\n\n\n\n\n\nFr, 11:00-12:45\nUpdate on team project (WC)\nMiel Hostens\n\n\n\n\n📂\n\n\n\nFr, 17:00\nProgramming assignment deadline\n\n\n\n\n📋\n\n\n\n3\nTue, 9:00-10:45\nData transformation techniques - logical vectors and numbers (WC)\nMiel Hostens\n📖\n\n\n\n\n\n\n\nTue, 11:00-12:45\nData transformation techniques - strings and regular expressions (WC)\nMiel Hostens\n📖\n\n\n\n\n\n\n\nTue, 13:15-15:00\nData transformation techniques - factors, datatimes and missing values (WC)\nMiel Hostens\n📖\n\n\n\n\n\n\n\nWed, 9:00-10:45\nData transformation techniques - join and aggregation methods (WC)\nMiel Hostens\n📖\n\n\n\n\n\n\n\nWed, 13:15-17:00\nR Programming (WC)\nYara Slegers & Belen Rabaglino\n\n\n\n\n\n\n\n\nFr, 11:00-12:45\nUpdate on team project (WC)\nMiel Hostens\n\n\n\n\n📂\n\n\n\nFr, 17:00\nProgramming assignment deadline\n\n\n\n\n📋\n\n\n\n4\n\n\n\n\n\n\n\n\n\n\n\nWed, 13:15-17:00\nR Programming (WC)\nYara Slegers & Belen Rabaglino\n\n\n\n\n\n\n\n\nFr, 11:00-12:45\nUpdate on team project (WC)\nMiel Hostens\n\n\n\n\n📂\n\n\n\nFr, 17:00\nProgramming assignment deadline\n\n\n\n\n📋\n\n\n\n5\n\n\n\n\n\n\n\n\n\n\n\nTue, 13:00-17:00\nR Programming (WC)\nYara Slegers & Belen Rabaglino\n\n\n\n\n\n\n\n\nFr, 11:00-12:45\nFinal project presentation\n\n\n\n\n\n📂\n\n\n\nFr, 13:15-15:00\nCourse evaluation\n\n\n\n\n\n\n\n\n\nFr, 17:00\nProgramming assignment deadline\n\n\n\n\n📋"
+    "text": "This page contains an outline of the topics, content, and assignments for the course. Note that this schedule will be updated as the course progresses, with all changes documented here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nTeachers\nPrepare\nSlides\nCode’n Practice\nAssignment\nProject\n\n\n\n\n1\nMon, 9:00-9:45\nWelcome to Digital Ag (HC)\nMiel Hostens\n\n🖥️\n\n\n\n\n\n\nMon, 10:00-10:45\nIntroduction to statisticalprogramming (WC)\nMiel Hostens & Belen Rabaglino\n📖\n🖥️\n\n\n\n\n\n\nMon, 11:00-11h45\nDigital transformations in livestock and agriculture (IC) - Part A\nMiel Hostens\n\n🖥️\n\n\n\n\n\n\nMon, 11:00-11h45\nDigital transformations in livestock and agriculture (IC) - Part B\n\n\n\n\n\n\n\n\n\nMon, 13:15-15:00\nIntroduction to team project (WC)\nMiel Hostens\n\n\n\n\n📂\n\n\n\nMon, 15:15-17:00\nA guideline to reproducible & FAIR data science (IC)\nMiel Hostens\n📖\n\n\n\n\n\n\n\nTue, 13:00-17:00\nTeam project - farm visit\nOn your own\n\n\n\n\n\n\n\n\nWed, 13:15-17:00\nStatistical programming (WC)\nYara Slegers & Belen Rabaglino\n📖\n\n💻\n\n\n\n\n\nTh, 9:00-12:00\nChallenges of data privacy (IC)\nHans vernooij\n📖\n🖥️\n\n\n\n\n\n\nFr, 11:00-12:45\nUpdate on team project (WC)\nMiel Hostens\n\n\n\n\n📂\n\n\n\nFr, 17:00\nProgramming assignment deadline\n\n\n\n\n📋\n\n\n\n2\nMon, 11:00-12:45\nModelling biological linear processes (WC)\nJan van den Broek\n📖\n\n\n\n\n\n\n\nTue, 13:15-17:00\nVisualisation techniques for biological processes (WC)\nMiel Hostens\n📖\n🖥️\n\n\n\n\n\n\nWed, 13:15-17:00\nR Programming (WC)\nYara Slegers & Belen Rabaglino\n📖\n\n\n\n\n\n\n\nFr, 11:00-12:45\nUpdate on team project (WC)\nMiel Hostens\n\n\n\n\n📂\n\n\n\nFr, 17:00\nProgramming assignment deadline\n\n\n\n\n📋\n\n\n\n3\nTue, 9:00-10:45\nData transformation techniques - logical vectors and numbers (WC)\nMiel Hostens\n📖\n\n\n\n\n\n\n\nTue, 11:00-12:45\nData transformation techniques - strings and regular expressions (WC)\nMiel Hostens\n📖\n\n\n\n\n\n\n\nTue, 13:15-15:00\nData transformation techniques - factors, datatimes and missing values (WC)\nMiel Hostens\n📖\n\n\n\n\n\n\n\nWed, 9:00-10:45\nData transformation techniques - join and aggregation methods (WC)\nMiel Hostens\n📖\n\n\n\n\n\n\n\nWed, 13:15-17:00\nR Programming (WC)\nYara Slegers & Belen Rabaglino\n\n\n\n\n\n\n\n\nFr, 11:00-12:45\nUpdate on team project (WC)\nMiel Hostens\n\n\n\n\n📂\n\n\n\nFr, 17:00\nProgramming assignment deadline\n\n\n\n\n📋\n\n\n\n4\nMo, 14:15-17:00\nIndustry visit at Lely\nElisa Vrieze\n📖\n\n\n\n\n\n\n\nTue, 13:15-14:15\nReproducible & FAIR data science (WC)\nMiel Hostens\n📖\n\n\n\n\n\n\n\nTue, 14:15-17:00\nR Programming (WC)\nYara Slegers & Belen Rabaglino\n📖\n\n\n\n\n\n\n\nWed, 13:15-17:00\nPrediction modelling for biological processes (WC)\nBelen Rabaglino\n📖\n\n\n\n\n\n\n\nFr, 11:00-12:45\nUpdate on team project (WC)\nMiel Hostens\n\n\n\n\n📂\n\n\n\nFr, 17:00\nProgramming assignment deadline\n\n\n\n\n📋\n\n\n\n5\n\n\n\n\n\n\n\n\n\n\n\nTue, 13:00-17:00\nR Programming (WC)\nYara Slegers & Belen Rabaglino\n\n\n\n\n\n\n\n\nFr, 11:00-12:45\nFinal project presentation\n\n\n\n\n\n📂\n\n\n\nFr, 13:15-15:00\nCourse evaluation\n\n\n\n\n\n\n\n\n\nFr, 17:00\nProgramming assignment deadline\n\n\n\n\n📋"
   },
   {
     "objectID": "labs/lab-0.html",
@@ -557,42 +557,63 @@
     "href": "weeks/week-3.html",
     "title": "Week 3",
     "section": "",
-    "text": "In this week of the course, you'll learn about the most important types of variables that you'll encounter inside a data frame and learn the tools you can use to manipulate them.\nWe will go through the chapters from the R for Data Science (2nd edition) book as you will need these techniques for your project; they're designed to be largely standalone so that they can be read in advance."
+    "text": "In this week of the course, you’ll learn about the most important types of variables that you’ll encounter inside a data frame and learn the tools you can use to manipulate them.\nWe will go through the chapters from the R for Data Science (2nd edition) book as you will need these techniques for your project; they’re designed to be largely standalone so that they can be read in advance."
   },
   {
     "objectID": "weeks/week-3.html#data-transformation-techniques---logical-vectors-and-numbers-wc",
     "href": "weeks/week-3.html#data-transformation-techniques---logical-vectors-and-numbers-wc",
     "title": "Week 3",
     "section": "Data transformation techniques - logical vectors and numbers (WC)",
-    "text": "Data transformation techniques - logical vectors and numbers (WC)\n\nChapter 12 teaches you about logical vectors. These are the simplest types of vectors, but are extremely powerful. You'll learn how to create them with numeric comparisons, how to combine them with Boolean algebra, how to use them in summaries, and how to use them for condition transformations.\nChapter 13 dives into tools for vectors of numbers, the powerhouse of data science. You'll learn more about counting and a bunch of important transformation and summary functions."
+    "text": "Data transformation techniques - logical vectors and numbers (WC)\n\nChapter 12 teaches you about logical vectors. These are the simplest types of vectors, but are extremely powerful. You’ll learn how to create them with numeric comparisons, how to combine them with Boolean algebra, how to use them in summaries, and how to use them for condition transformations.\nChapter 13 dives into tools for vectors of numbers, the powerhouse of data science. You’ll learn more about counting and a bunch of important transformation and summary functions."
   },
   {
     "objectID": "weeks/week-3.html#data-transformation-techniques---strings-and-regular-expressions-wc",
     "href": "weeks/week-3.html#data-transformation-techniques---strings-and-regular-expressions-wc",
     "title": "Week 3",
     "section": "Data transformation techniques - Strings and regular expressions (WC)",
-    "text": "Data transformation techniques - Strings and regular expressions (WC)\n\nChapter 14 will give you the tools to work with strings: you'll slice them, you'll dice them, and you'll stick them back together again. This chapter mostly focuses on the stringr package, but you'll also learn some more tidyr functions devoted to extracting data from character strings.\nChapter 15 introduces you to regular expressions, a powerful tool for manipulating strings. This chapter will take you from thinking that a cat walked over your keyboard to reading and writing complex string patterns."
+    "text": "Data transformation techniques - Strings and regular expressions (WC)\n\nChapter 14 will give you the tools to work with strings: you’ll slice them, you’ll dice them, and you’ll stick them back together again. This chapter mostly focuses on the stringr package, but you’ll also learn some more tidyr functions devoted to extracting data from character strings.\nChapter 15 introduces you to regular expressions, a powerful tool for manipulating strings. This chapter will take you from thinking that a cat walked over your keyboard to reading and writing complex string patterns."
   },
   {
     "objectID": "weeks/week-3.html#data-transformation-techniques---factors-datatimes-and-missing-values-wc",
     "href": "weeks/week-3.html#data-transformation-techniques---factors-datatimes-and-missing-values-wc",
     "title": "Week 3",
     "section": "Data transformation techniques - Factors, datatimes and missing values (WC)",
-    "text": "Data transformation techniques - Factors, datatimes and missing values (WC)\n\nChapter 16 introduces factors: the data type that R uses to store categorical data. You use a factor when variable has a fixed set of possible values, or when you want to use a non-alphabetical ordering of a string.\nChapter 17 will give you the key tools for working with dates and date-times. Unfortunately, the more you learn about date-times, the more complicated they seem to get, but with the help of the lubridate package, you'll learn to how to overcome the most common challenges."
+    "text": "Data transformation techniques - Factors, datatimes and missing values (WC)\n\nChapter 16 introduces factors: the data type that R uses to store categorical data. You use a factor when variable has a fixed set of possible values, or when you want to use a non-alphabetical ordering of a string.\nChapter 17 will give you the key tools for working with dates and date-times. Unfortunately, the more you learn about date-times, the more complicated they seem to get, but with the help of the lubridate package, you’ll learn to how to overcome the most common challenges."
   },
   {
     "objectID": "weeks/week-3.html#data-transformation-techniques---join-and-aggregation-methods-wc",
     "href": "weeks/week-3.html#data-transformation-techniques---join-and-aggregation-methods-wc",
     "title": "Week 3",
     "section": "Data transformation techniques - join and aggregation methods (WC)",
-    "text": "Data transformation techniques - join and aggregation methods (WC)\n\nChapter 18 discusses missing values in depth. We've discussed them a couple of times in isolation, but now it's time to discuss them holistically, helping you come to grips with the difference between implicit and explicit missing values, and how and why you might convert between them.\nChapter 19 finishes up this part of the book by giving you tools to join two (or more) data frames together. Learning about joins will force you to grapple with the idea of keys, and think about how you identify each row in a dataset."
+    "text": "Data transformation techniques - join and aggregation methods (WC)\n\nChapter 18 discusses missing values in depth. We’ve discussed them a couple of times in isolation, but now it’s time to discuss them holistically, helping you come to grips with the difference between implicit and explicit missing values, and how and why you might convert between them.\nChapter 19 finishes up this part of the book by giving you tools to join two (or more) data frames together. Learning about joins will force you to grapple with the idea of keys, and think about how you identify each row in a dataset."
   },
   {
     "objectID": "weeks/week-4.html",
     "href": "weeks/week-4.html",
-    "title": "Week 1",
+    "title": "Week 4",
     "section": "",
-    "text": "coming soon"
+    "text": "In this week of the course, we will focus on gradually working towards prediction modelling."
+  },
+  {
+    "objectID": "weeks/week-4.html#industry-visit-at-lely-industry-visit",
+    "href": "weeks/week-4.html#industry-visit-at-lely-industry-visit",
+    "title": "Week 4",
+    "section": "Industry visit at Lely (Industry visit)",
+    "text": "Industry visit at Lely (Industry visit)\n\nHave a look at this tutorial Home - Lely Horizon - Veterinarians (maglr.com).\nYou will be welcomed by Elisa Vrieze at 14:15 at the Lely campus.\nThe address is Cornelis van der Lelylaan 1, Maassluis.\nYou will be able to visit the company and ask questions around the data collected in the project."
+  },
+  {
+    "objectID": "weeks/week-4.html#reproducible-fair-data-science-ic",
+    "href": "weeks/week-4.html#reproducible-fair-data-science-ic",
+    "title": "Week 4",
+    "section": "Reproducible & FAIR data science (IC)",
+    "text": "Reproducible & FAIR data science (IC)\n\nCreate an account at GitHub account before the start of the lesson.\nYou will be introduced on how to work with Github - Colab and RStudio.\nWe will follow parts of this tutorial for RStudio and this tutorial for Colab."
+  },
+  {
+    "objectID": "weeks/week-4.html#prediction-modelling-for-biological-processes",
+    "href": "weeks/week-4.html#prediction-modelling-for-biological-processes",
+    "title": "Week 4",
+    "section": "Prediction modelling for biological processes",
+    "text": "Prediction modelling for biological processes"
   },
   {
     "objectID": "weeks/week-5.html",
